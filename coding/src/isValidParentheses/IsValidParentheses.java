@@ -13,6 +13,8 @@ class valid{
 	public static boolean isValid(String s){
 		HashMap<Character, Character> hm = new HashMap<Character, Character>();
 		hm.put('(', ')');
+		hm.put('[', ']');
+		hm.put('{', '}');
 		
 		Stack<Character> stack = new Stack<Character>();
 		
