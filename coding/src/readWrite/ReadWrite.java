@@ -18,18 +18,21 @@ public class ReadWrite {
 		} catch(FileNotFoundException e){
 			System.out.println("Cannot Open File");
 		}
-		
+		String t  = "";
 		try{
 			do{
 				i = inputFile.read();
 				if(i != -1){
 					System.out.print((char) i);
 					outputFile.write(i);
+					t = t + ((char) i);
 				}
 			} while(i != -1);
 		} catch(IOException e) {
 			System.out.println("Error Reading File.");
 		}
+		t = t + "zz";
+		System.out.print(t.toString());
 		
 		try{
 			inputFile.close();
