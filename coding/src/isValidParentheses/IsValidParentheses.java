@@ -34,6 +34,8 @@ class valid{
 		
 		Stack<Character> stack = new Stack<Character>();
 		
+		//char [] charArray = s.toCharArray(); //we can use those two lines to replace the following two lines below. 
+		//for(Character c: charArray){
 		for(int i = 0; i < s.length(); i++){
 			char c = s.charAt(i);		// s.charAt(i), convert the item at string s position i to char
 			if(hm.keySet().contains(c)){// check if the character is parentheses; keySet() get all of keys in hashmap
