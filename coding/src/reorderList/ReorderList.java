@@ -1,5 +1,19 @@
 package reorderList;
 
+/* Problem:
+ * Given a singly linked list L: L0→L1→ ... →Ln-1→Ln,
+ * reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→.
+ * For example, given {1,2,3,4}, reorder it to {1,4,2,3} or {1,2,3,4,5} to {1,5,2,4,3}
+ * You must do this in-place without altering the nodes' values
+ * Thoughts:
+ * This problem is not straightforward, because it requires "in-place" operations. 
+ * That means we can only change their pointers, not creating a new list.
+ * 
+ * Solution:
+ * 1. Break list in the middle to two lists (use fast & slow pointers)
+ * 2. Reverse the order of the second list
+ * 3. Merge two list back together
+ */
 class ListNode {
 	int val;
 	ListNode next;
@@ -46,9 +60,9 @@ public class ReorderList {
 			}
 			
 			ListNode second = slow.next;
-
-			slow.next = null; // why? need to close first part
-			
+			//printList(head);
+			slow.next = null; // why? Need to close first part, uncommentout the two lines above and below this line and comment out this line or not
+			//printList(head);
 			second = reverseOrder(second);
 			
 			ListNode p1 = head;
