@@ -16,39 +16,37 @@ public class Zigzag {
 		
 		int i =0, j = 0;
 
-		while(!((i==height-1) && (j==width-1))){	
+		while(!((i==height-1) && (j==width-1)) && (i<height -1 && j<width-1)){	
 			
 			System.out.println(m[i][j]);
 			if(i<height-1){
-				i++;
+				i++;//go down in left edge
 			}else if(j<width-1){
-				j++;
+				j++;//go right in bottom edge
 			}else{
 				break;
 			}
-			
+			//go right top
 			while(i>0 && j<width-1){
 				System.out.println(m[i][j]);
 				i--;
 				j++;
 			}
 			
-			System.out.println(m[i][j]);
+			System.out.println(m[i][j]);//top edge
 			
 			if(i==0 && j<width-1){
-				j++;
+				j++;//go right on top edge
 			}else
 			{
-				i++;
+				i++;//go down on right edge
 			}
-			
+			// go down left
 			while(j>0 && i<height-1){
 				System.out.println(m[i][j]);
 				j--;
 				i++;
 			}
 		}
-
 	}
-
 }
