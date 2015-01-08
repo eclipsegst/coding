@@ -17,5 +17,6 @@ public class BinaryTreeTest {
 		tree.printInOrder(root);
 		System.out.println("Traversing tree front-to-back from location 7");
 		tree.printFrontToBack(root, 7);
+		System.out.println(tree.heightOfBinaryTree(root));
 	}
 }
