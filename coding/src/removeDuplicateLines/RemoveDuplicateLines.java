@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class RemoveDuplicateLines {
@@ -19,7 +20,8 @@ public class RemoveDuplicateLines {
 	public static void removeDuplicateLines(String filename) throws IOException{
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(filename));
-			Set<String> lines = new HashSet<String>(10000);
+			//Set<String> lines = new LinkedHashSet <String>(10000); // keep in order
+			Set<String> lines = new HashSet <String>(10000);
 			String line;
 			while((line = reader.readLine()) != null){
 				lines.add(line); // duplicate value will not be added to the hashset.
