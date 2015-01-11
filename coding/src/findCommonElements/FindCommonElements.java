@@ -11,6 +11,11 @@ public class FindCommonElements {
 		list1 = findCommon(array1, array2);
 		System.out.println(Arrays.toString(list1.toArray()));
 		
+		System.out.println("Binary Search Approach:");
+		List<Integer> list2 = new LinkedList<Integer>();
+		list2 = findCommonBinary(array1,array2);
+		System.out.println(Arrays.toString(list2.toArray()));
+		
 		System.out.println("HashTable Approach:");
 		List<Integer> list3 = new LinkedList<Integer>();
 		list3 = findCommonHash(array1,array2);
@@ -40,6 +45,51 @@ public class FindCommonElements {
 	}
 	
 	// method 2: binary search time complexity: O(mlog(n))
+	
+	
+	public static List<Integer> findCommonBinary(int[] array1, int[] array2){
+		List<Integer> list = new LinkedList<Integer>();
+		boolean found = false;
+		for(int i=0; i<array1.length-1;i++){
+			found = binarySearch(array2, array1[i]);
+			if(found == true){
+				list.add(array1[i]);
+			}
+		}
+		
+		if(list.isEmpty()){
+			return null;
+		}else{
+			return list;
+		}
+	}
+	
+	public static boolean binarySearch(int[] array, int n){
+		boolean found = false;
+		int first, last, mid;
+		first = 0;
+		last  = array.length-1;
+		mid = (first + last)/2;
+		
+		while(first <= last){
+			if(array[mid] < n){
+				first = mid + 1;
+			}else if(array[mid] == n){
+				found = true;
+				break;
+			}else{
+				last = mid - 1;
+			}
+			
+			mid = (first + last)/2;
+		}
+		
+		if(first > last){
+			found = false;
+		}
+		
+		return found;
+	}
 
 	
 	// method 3: hashtable approach time complexity: O(m+n), hash each element in B to an using 
