@@ -100,7 +100,6 @@ public class FindCommonElements {
 				hash.put(item,"z");
 			}
 		}
-		
 		List<Integer> list = new LinkedList<Integer>();
 		for (int item : array2){
 			if(hash.containsKey(item)){
