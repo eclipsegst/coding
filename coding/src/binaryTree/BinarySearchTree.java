@@ -1,5 +1,9 @@
 package binaryTree;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Stack;
+
 public class BinarySearchTree {
 //  public Node root;
   public static void main(String[] args){
@@ -13,8 +17,10 @@ public class BinarySearchTree {
     System.out.println("In-Order Traversal Recursive Solution");
     inOrderTraversalRecursive(root);
     System.out.println();
-    System.out.println("In-Order Traversal Iterative solution");
-    inOrderTraversalIterative(root);
+    System.out.println("In-Order Traversal Stack Iterative solution");
+    System.out.println(inOrderTraversal(root).toString());
+    System.out.println("In-Order Traversal Morris solution");
+    System.out.println(inOrderTraversalMorris(root).toString());
     System.out.println("Pre-Order Traversal Recursive Solution");
     preOrderTraversalRec(root);
     System.out.println();
@@ -76,10 +82,52 @@ public class BinarySearchTree {
       inOrderTraversalRecursive(node.right);
     }
   }
-  
-  /*In-Order traverse the tree in iterative way*/
-  public static void inOrderTraversalIterative(Node node) {
 
+  /*Solution 1: Use a stack. Time: O(n), Space: O(log n)*/
+  public static ArrayList<Integer> inOrderTraversal(Node root) {
+	ArrayList<Integer> res = new ArrayList<Integer>();
+	if (root == null) return res;
+	
+	Stack<Node> s = new Stack<Node>();
+	Node cur = root;
+	while (!s.isEmpty() || cur != null){
+		if (cur != null){
+			s.push(cur);
+			cur = cur.left;
+		}else{
+			cur = s.pop();
+			res.add(cur.value);
+			cur = cur.right;
+		}
+	}
+	return res;
+  }
+  
+  /*Morris algorithm. Time:O(n), Space: O(1) cause only use two pointers.*/
+  public static ArrayList<Integer> inOrderTraversalMorris(Node root){
+	ArrayList<Integer> res = new ArrayList<Integer>();
+	Node cur = root, next = null;
+	while (cur != null) {
+	  if (cur.left != null) {
+		  next = cur.left; // next pointer to cur.left
+		  while (next.right != null && next.right != cur) {
+			  next = next.right;
+		  }
+		  
+		  if(next.right == null){
+			  next.right = cur; // connect right bottom node of left root to root
+			  cur = cur.left;
+		  }else{
+			  next.right = null;
+			  res.add(cur.value);
+			  cur = cur.right;
+		  }
+	  }else{
+		  res.add(cur.value);
+		  cur = cur.right;
+	  }
+	}
+	return res;
   }
   
   /*Pre-Order traverse the tree in recursive way*/
