@@ -16,16 +16,16 @@ import java.util.HashMap;
  *
  */
 
-/* Definition of undirected graph */
-class UndirectedGraphNode{
-  int label;
-  ArrayList<UndirectedGraphNode> neighbors;
-  UndirectedGraphNode(int x) {
-    label = x;
-    neighbors = new ArrayList<UndirectedGraphNode>();
-  }
-}
-
+/* Definition of undirected graph
+ * class UndirectedGraphNode{
+ *   int label;
+ *   ArrayList<UndirectedGraphNode> neighbors;
+ *   UndirectedGraphNode(int x) {
+ *     label = x;
+ *     neighbors = new ArrayList<UndirectedGraphNode>();
+ *   }
+ * }
+*/
 public class CloneUndirectedGraph {
   public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
     if (node == null) {

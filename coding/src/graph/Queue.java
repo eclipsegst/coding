@@ -1,8 +1,8 @@
 package graph;
 
 public class Queue {
-  GraphNode first, last;
-  public void enqueue (GraphNode n) {
+  DirectedGraphNode first, last;
+  public void enqueue (DirectedGraphNode n) {
     if (first == null) {
       first = n;
       last = first;
@@ -12,11 +12,11 @@ public class Queue {
     }
   }
   
-  public GraphNode dequeue() {
+  public DirectedGraphNode dequeue() {
     if (first == null) {
       return null;
     }else{
-      GraphNode temp = new GraphNode(first.val, first.neightbors);
+      DirectedGraphNode temp = new DirectedGraphNode(first.val, first.neightbors);
       first = first.next;
       return temp;
     }

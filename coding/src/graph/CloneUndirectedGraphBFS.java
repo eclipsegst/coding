@@ -16,14 +16,7 @@ import java.util.LinkedList;
  * A map is used to store the visited nodes. It's like a checker and it is the map between original node and copied node.
  * 
  */
-class UndirectedGraphNode {
-  int label;
-  ArrayList<UndirectedGraphNode> neighbors;
-  UndirectedGraphNode(int x){
-    label = x;
-    neighbors = new ArrayList<UndirectedGraphNode>();
-  }
-}
+
 public class CloneUndirectedGraphBFS {
   public UndirectedGraphNode cloneGraph(UndirectedGraphNode node){
     if (node == null) {
