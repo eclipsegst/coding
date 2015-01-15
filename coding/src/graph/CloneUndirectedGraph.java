@@ -2,6 +2,19 @@ package graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+/**
+ * 
+ * @author zz
+ * Date: 01/15/2014 02:00
+ * 
+ * Problem: 
+ * Clone an undirected graph. Each node in the graph contains a label and a list of its neighbors.
+ * 
+ * Solution: 
+ * DFS traverse all nodes, meanwhile use HashMap to record the node which has been cloned. 
+ * Use label as key and the new created node as value.
+ *
+ */
 
 /* Definition of undirected graph */
 class UndirectedGraphNode{
