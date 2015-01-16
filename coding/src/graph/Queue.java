@@ -8,7 +8,7 @@ public class Queue {
       last = first;
     }else{
       last.next = n;
-      last = n;
+      last = n; // change the last pointer to point n
     }
   }
   
