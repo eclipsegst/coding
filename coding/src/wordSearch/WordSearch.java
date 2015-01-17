@@ -40,7 +40,7 @@ public class WordSearch {
     System.out.println(wordSearch(board,"SFCS"));
     System.out.println(wordSearch(board,"SEE"));
     System.out.println(wordSearch(board,"ABCB"));
-    System.out.println(wordSearch(board,"ABCCFB"));
+    System.out.println(wordSearch(board,"BCCFSA"));
     
   }
   
@@ -91,7 +91,7 @@ public class WordSearch {
         || SearchDFS(board, word, position + 1, i, j-1, visited)
         || SearchDFS(board, word, position + 1, i, j+1, visited);
     
-    visited[i][j] = false;
+    visited[i][j] = false; // why set to false? 
     
     return res;
   }
