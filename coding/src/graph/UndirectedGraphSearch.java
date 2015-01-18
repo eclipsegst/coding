@@ -13,6 +13,32 @@ import java.util.Stack;
  *           8
  * DFS: 14736825
  * BFS: 12345678
+ * 
+ * DEF Solution:
+ * Push root to the stack
+ * 
+ * If stack is not empty, loop
+ * get the head of the stack by peek the stack
+ * 
+ * add the label to the list
+ * set visited to true
+ * push all the neighbors to the stack
+ * 
+ * if all neighbors are visited then pop the stack
+ * if neighbors empty pop stack
+ * 
+ * 
+ * BFS Solution:
+ * add root to the queue
+ * 
+ * if queue is not empty, loop
+ * get the head of the stack by peek the queue
+ * 
+ * add all neighbors lable to the list
+ * add all neighbors to the queue
+ * 
+ * if all neighbors are visited then poll the queue
+ * if neighbors are empty, then poll the queue
  *           
  */
 public class UndirectedGraphSearch {
