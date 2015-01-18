@@ -1,6 +1,6 @@
 package graph;
 
-public class Queue {
+public class MyQueue {
   DirectedGraphNode first, last;
   public void enqueue (DirectedGraphNode n) {
     if (first == null) {

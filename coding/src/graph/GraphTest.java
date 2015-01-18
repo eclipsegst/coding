@@ -22,7 +22,7 @@ public class GraphTest {
       System.out.println("find in root");
     }
     
-    Queue queue = new Queue();
+    MyQueue queue = new MyQueue();
     root.visited = true;
     queue.enqueue(root);
     
