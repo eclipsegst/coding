@@ -14,7 +14,8 @@ public class RemoveDuplicates {
 //	System.out.println(a.length);
 //	System.out.println(countUnique(a));
 //	System.out.println(removeDuplicatesTwoNaive(arr2));
-	System.out.println(removeDuplicatesCorrect(arr2));
+//	System.out.println(removeDuplicatesCorrect(arr2));
+	System.out.println(removeDuplicatesBetter(arr2));
 	System.out.println(arr2[3]);
   }
 	
@@ -103,5 +104,27 @@ public class RemoveDuplicates {
       i++;
     }
     return a.length - count;
+  }
+  
+  /*Use to pointer, the previous pointer + 1 will be the result.*/
+  public static int removeDuplicatesBetter(int[] a) {
+    if (a.length <= 2) {
+      return a.length;
+    }
+    
+    int pre = 1;
+    int cur = 2;
+    
+    while (cur < a.length) {
+      if (a[cur] == a[pre] && a[cur] == a[pre-1]) {
+        cur ++;
+      } else {
+        pre ++;
+        a[pre] = a[cur];
+        cur ++;
+      }
+    }
+    
+    return pre + 1;
   }
 }
