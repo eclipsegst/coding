@@ -11,6 +11,7 @@ public class RemoveDuplicates {
 		int[] arr = {1,2,2,3,3};
 		arr = removeDuplicates(arr);
 		System.out.println(arr.length);
+		System.out.println(countUnique(arr));
 	}
 	
 	public static int[] removeDuplicates(int[] a) {
@@ -33,5 +34,15 @@ public class RemoveDuplicates {
 		
 		int[] b = Arrays.copyOf(a, j+1);
 		return b;
+	}
+	
+	public static int countUnique(int[] a) {
+		int count = 0;
+		for (int i = 0; i < a.length - 1; i++) {
+			if (a[i] == a[i+1]) {
+				count++;
+			}
+		}
+		return (a.length - count);
 	}
 }
