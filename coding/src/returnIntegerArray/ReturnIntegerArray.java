@@ -13,13 +13,17 @@ public class ReturnIntegerArray {
     int[] c = returnArray(a);
     int[] d = returnArray(b);
     
-    for (int i=0; i<c.length; i++) {
-      System.out.print(c[i]);
-    }
-    System.out.println();
-    for (int i=0; i<d.length; i++) {
-      System.out.print(d[i]);
-    }
+    printArray(c);
+    printArray(d);
+    
+    int[] e = {1,2,3,4};
+    int[] f = {9,9,9,9};
+    int[] g = {2,2,2,2};
+    int[] h = returnArrayTwo(f,e); //output {1,1,2,3,3}
+    int[] i = returnArrayTwo(g,e); //output {3,4,5,6}
+    
+    printArray(h);
+    printArray(i);
   }
   public static int[] returnArray(int[] a) {
     if (a == null) {
@@ -46,9 +50,7 @@ public class ReturnIntegerArray {
       }
       else{
         flag = true;
-        String str = Integer.toString(temp);
-        a[a.length-1 -j] = Integer.parseInt(str) % 10;
-        //a[a.length-1 -j] = 0;
+        a[a.length-1 -j] = temp % 10;
       }
       s.pop();
     }
@@ -63,5 +65,66 @@ public class ReturnIntegerArray {
     }
     return a;
   }
+  
+//given two integer array return one array
+public static int[] returnArrayTwo(int[] a, int[] b) {
+  if (a==null && b!=null) {
+    return b;
+  } else if (a!=null && b==null) {
+    return a;
+  } else if (a==null && b==null) {
+    return null;
+  }
+  int lena = a.length;
+  int lenb = b.length;
+  if (lena != lenb) {
+    return null;
+  }
 
+  Stack<Integer> sa = new Stack<Integer>();
+  Stack<Integer> sb = new Stack<Integer>();
+ 
+  for (int i=0; i<lena; i++) {
+    sa.push(a[i]);
+    sb.push(b[i]);
+  }
+  
+  boolean flag = false;
+  int sum = 0, tempa = 0, tempb = 0;
+    for (int k=0; k<lena; k++) {
+      tempa = sa.peek();
+      tempb = sb.peek();
+      if(flag){
+        sum = tempa + tempb + 1;
+      } else {
+        sum = tempa + tempb;
+      }
+
+      if (sum < 10) {
+        a[lena-1-k] = sum;
+        flag = false;
+      } else {
+        a[lena-1-k] = sum % 10;
+        flag = true;
+      }
+      sa.pop();
+      sb.pop();
+    }
+    if (flag) {
+      int[] arr = new int[lena+1];
+      arr[0] = 1;
+      for (int m=0; m<lena; m++) {
+        arr[m+1] = a[m]; 
+      }
+      return arr;
+    }
+    return a;
+  }
+  
+  public static void printArray(int[] a) {
+    for (int i=0; i<a.length; i++) {
+      System.out.print(a[i]);
+    }
+    System.out.println();
+  }
 }
