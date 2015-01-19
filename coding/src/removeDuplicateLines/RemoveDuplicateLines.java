@@ -1,5 +1,6 @@
 package removeDuplicateLines;
 
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
@@ -9,6 +10,16 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
+
+/*
+ * Problem:
+ * Remove duplicate lines in a file.
+ * 
+ * Solution:
+ * Use FileReader and FileWriter to read and write the file. 
+ * Use BufferedReader and BufferedWriter to read and write memory
+ * Use HashSet to store unique lines
+ */
 
 public class RemoveDuplicateLines {
 	public static void main(String[] args) throws IOException{
