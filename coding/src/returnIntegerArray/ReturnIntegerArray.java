@@ -24,6 +24,11 @@ public class ReturnIntegerArray {
     
     printArray(h);
     printArray(i);
+    
+    int[] m = {1,2};
+    int[] n = {1,1};
+    int[] l = returnArrayMultiply(m,n);
+    printArray(l);
   }
   public static int[] returnArray(int[] a) {
     if (a == null) {
@@ -127,4 +132,44 @@ public static int[] returnArrayTwo(int[] a, int[] b) {
     }
     System.out.println();
   }
+//two array multiply
+public static int[] returnArrayMultiply(int[] a, int[] b) {
+  if (a==null && b!=null) {
+    return b;
+  } else if (a!=null && b==null) {
+    return a;
+  } else if (a==null && b==null) {
+    return null;
+  }
+  boolean flag = false;// leading zero
+  String stra = "";
+  String strb = "";
+  for (int i=0; i<a.length; i++) {
+    if (a[i] != 0) {
+      flag = true;
+    }
+    if (flag) {
+      stra += a[i];
+    }
+  }
+ 
+  flag = false;
+  for (int j=0; j<b.length; j++) {
+    if (b[j] != 0) {
+      flag = true;
+    }
+    if (flag){
+      strb += b[j];
+    }
+  }
+  int ia = Integer.parseInt(stra);
+  int ib = Integer.parseInt(strb);
+  int result = ia * ib;
+  String str = String.valueOf(result);
+  int[] res = new int[str.length()];
+  for (int k=0;k<str.length();k++) {
+    res[k] = Character.getNumericValue(str.charAt(k));
+  }
+  return res;
+}
 }
