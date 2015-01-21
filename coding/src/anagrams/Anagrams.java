@@ -3,7 +3,6 @@ package anagrams;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 /*
  * Date: 01/20/2015 21:21
@@ -19,12 +18,12 @@ public class Anagrams {
     list = anagrams(strs);
     System.out.println(Arrays.toString(list.toArray()));
   }  
-  public static ArrayList<String> anagrams(String[] strs) {
-    ArrayList<String> res = new ArrayList<String>();
+  public static List<String> anagrams(String[] strs) {
+    List<String> res = new ArrayList<String>();
     if (strs == null || strs.length==0) {
       return res;
     }
-    HashMap<String,ArrayList<String>> map = new HashMap<String, ArrayList<String>>();
+    HashMap<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>();
     for (int i=0; i<strs.length; i++) {
       char[] charArr = strs[i].toCharArray();
       Arrays.sort(charArr);
@@ -38,11 +37,9 @@ public class Anagrams {
       }
     }
     
-    Iterator iter = map.values().iterator();
-    while(iter.hasNext()) {
-      ArrayList<String> item = (ArrayList<String>)iter.next();
-      if (item.size()>1) {
-        res.addAll(item);
+    for(List<String> s : map.values()){
+      if (s.size()>1) {
+        res.addAll(s);
       }
     }
     return res;
