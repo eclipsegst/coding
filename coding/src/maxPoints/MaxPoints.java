@@ -1,7 +1,6 @@
 package maxPoints;
 import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
+ 
 /*
  * Date: 01/21/2015 20:30
  * Problem:
