@@ -1,4 +1,4 @@
-package returnIntegerArray;
+package multiplyStrings;
 import java.util.Stack;
 /*
  * Date: 01/19/2015 14:00
