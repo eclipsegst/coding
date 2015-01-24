@@ -16,8 +16,7 @@ import java.util.ArrayList;
  */
 public class ThreeSum {
   public static void main(String[] args) {
-    //int[] nums = {-1, 0, 1, 2, -1, -4};
-    int[] nums = {1,-1,-1,0};
+    int[] nums = {-1, 0, 1, 2, -1, -4};
     //Arrays.sort(nums);
     //System.out.println(nums[1]);
     printArrayList(threeSum(nums));
@@ -51,7 +50,7 @@ public class ThreeSum {
               end --;
             while (mid < end && num[mid] == num[mid - 1])
               mid ++;
-          } else if (num[i] + num[mid] + num[end] < 0) {
+          } else if (num[mid] + num[end] - num[i] < 0) {
             mid ++;
           } else {
             end --;
