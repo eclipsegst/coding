@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html lang="en" class="">
 <head>
 	<meta charset="UTF-8">
@@ -16,3 +17,6 @@
 	</ul>
 </body>
 </html>
+=======
+I use Eclipse and Git(EGit) in this project.
+>>>>>>> parent of f5601bd... Added details about this project.
