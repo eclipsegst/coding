@@ -1,9 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <html lang="en" class="">
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Readme</title>
+>>>>>>> parent of 5031136... Modified the layout of README
 </head>
 
 <body>
