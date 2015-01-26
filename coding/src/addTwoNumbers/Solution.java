@@ -64,6 +64,7 @@ public class Solution {
     while (rest != null) {
       r.val += rest.val;
       r.next = new ListNode(r.val/10);
+      r.val %= 10;
       beforeend = r;
       r = r.next;
       rest = rest.next;
