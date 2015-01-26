@@ -8,7 +8,8 @@ package reverse;
  */
 public class Solution {
   public static void main(String[] args) {
-    int x = -123;
+//    int x = -123;
+    int x = 1534236469;
     System.out.println(reverse(x));
   }
   public static int reverse(int x) {
@@ -16,7 +17,8 @@ public class Solution {
     if (x < 0) return -reverse(-x);
     int y = 0;
     do {
-      if (y * 10 + x % 10 > Integer.MAX_VALUE) {
+      // if (y * 10 + x % 10 > Integer.MAX_VALUE) does not work for the case int x = 1534236469;
+      if (y > (Integer.MAX_VALUE - x%10)/10) {
         return 0;
       }
       y = y * 10 + x % 10;
