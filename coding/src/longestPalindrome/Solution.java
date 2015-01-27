@@ -1,4 +1,7 @@
 package longestPalindrome;
+
+import java.util.Arrays;
+
 /*
  * Date: 01/25/2015 23:08
  * 
@@ -9,9 +12,11 @@ package longestPalindrome;
  */
 public class Solution {
   public static void main(String[] args) {
-    String s = "baabcdgfdcaba";
-    System.out.println(longestPalindromeDP(s));
-    System.out.println(longestPalindromeSimple(s));    
+    //String s = "bacabacacab";
+    String s = "aaaa";
+    //System.out.println(longestPalindromeDP(s));
+    //System.out.println(longestPalindromeSimple(s));   
+    System.out.println(longestPalindrome(s));
   }
   public static String longestPalindromeDP(String s) {
     char[] str = s.toCharArray();
@@ -68,5 +73,33 @@ public class Solution {
       r++;
     }
       return s.substring(l+1, r);
+  }
+  public static String longestPalindrome (String s) {
+    char[] S = s.toCharArray();
+    if (s == null || s == "" || S.length == 0) return "";
+    boolean T[][] = new boolean[S.length][S.length];
+    int maxi = 0;
+    int maxLen = 1;
+    // len = 1
+    Arrays.fill(T[0], true);
+    //len = 2
+    for (int i=0; i<S.length-1; i++) {
+      if (S[i] == S[i+1]) {
+        T[1][i] = true;
+        maxi = i;
+        maxLen = 2;
+      }
+    }
+    // len >= 3
+    for (int len=3; len<=S.length; len++) {
+      for (int i=0; i< S.length - (len-1); i++) {
+        if (T[len-1-2][i+1] && S[i] == S[i+len-1]) {
+          T[len-1][i] = true;
+          maxi = i;
+          maxLen = len;
+        }
+      }
+    }
+    return s.substring(maxi, maxi + maxLen);
   }
 }
