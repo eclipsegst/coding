@@ -11,8 +11,8 @@ public class RemoveDuplicates {
 	int[] arr1 = {1,2,2,3,4,4};
 	int[] arr2 = {1,1,1,2,2,2,3,3,3,4};
 	int [] a = removeDuplicates(arr1);
-//	System.out.println(a.length);
-//	System.out.println(countUnique(a));
+	System.out.println(a.length);
+	System.out.println(countUnique(a));
 //	System.out.println(removeDuplicatesTwoNaive(arr2));
 //	System.out.println(removeDuplicatesCorrect(arr2));
 	System.out.println(removeDuplicatesBetter(arr2));

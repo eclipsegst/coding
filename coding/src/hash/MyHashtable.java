@@ -5,7 +5,9 @@ public class MyHashtable<K, V> {
   private static int SIZE = 256;
   private int size;
   /* initialize an array to store the values */
+  @SuppressWarnings("unchecked")
   private V[] tableValues = (V[]) new Object[SIZE];
+  @SuppressWarnings("unchecked")
   private K[] tableKeys = (K[]) new Object[SIZE];
   
   public int size() {

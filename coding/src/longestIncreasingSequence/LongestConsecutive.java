@@ -4,7 +4,7 @@ import java.util.HashSet;
 public class LongestConsecutive {
   public int longestConsecutiveBasic(int[] n) {
     int max = 0;
-    HashSet hs = new HashSet();
+    HashSet<Integer> hs = new HashSet<Integer>();
     for (int i : n) {
       hs.add(i);
       int count = 0;
