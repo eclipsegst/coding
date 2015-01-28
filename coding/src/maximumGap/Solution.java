@@ -36,7 +36,7 @@ public class Solution {
     
     for(int i = 0; i < num.length; i++){
       int index = (num[i] - min) / gap;
-      if(buckets[index] == null) buckets [index] = new Bucket();
+      if(buckets[index] == null) buckets[index] = new Bucket();
       buckets[index].add(num[i]);
     }
     
