@@ -1,4 +1,4 @@
-package searchForRange;
+package searchRange;
 
 /*
  * Date: 01/19/2015 22:00
@@ -15,7 +15,8 @@ package searchForRange;
 public class SearchForRange {
   public static void main(String[] args) {
     int[] a = {5, 7, 7, 8, 8, 10};
-    int[] res = SearchRange(a,8);
+//    int[] res = SearchRange(a,8);
+    int[] res = searchRangeImproved(a,8);
     System.out.println("["+res[0]+","+res[1]+"]");
   }
   public static int[] SearchRange(int[] a, int t) {
@@ -66,5 +67,27 @@ public class SearchForRange {
       return res;
     }
     return res;
+  }
+  
+  public static int[] searchRangeImproved(int[] A, int target) {
+    int s = 0;
+    int e = A.length;
+    while(s < e){
+      int mid = (s + e) / 2;
+      if(A[mid] == target) {
+        int ss = mid;
+        int ee = mid;
+        while(ss - 1 >= 0 && A[ss-1] == target)
+          ss--;
+        while(ee + 1 < A.length && A[ee+1] == target) 
+          ee++;
+        return new int[]{ss,ee};
+      } else if(A[mid] < target){
+        s = mid + 1;
+      } else if(A[mid] > target){
+        e = mid;
+      }
+    }
+    return new int[] {-1,-1};
   }
 }
