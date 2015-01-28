@@ -1,5 +1,10 @@
 package palindrome;
-
+/*
+ * Date: 2015-01-12 00:04:31
+ * 
+ * Problem:
+ * Determine whether an integer is a palindrome. Do this without extra space.
+ */
 public class Palindrome {
 	public static void main(String[] args){
 		System.out.println("Test Palindrome");
@@ -34,5 +39,18 @@ public class Palindrome {
 			div /= 100;
 		}
 		return true;
+	}
+	
+	public static boolean palindrome(int x) {
+	  if (x < 0) return false;
+	  if (x == 0) return true;
+	  int size = (int) Math.log10(x);
+	  int mid = size / 2;
+	  for (int i=0; i<=mid ; i++) {
+	    int p = (int) (x / Math.pow(10, i)) % 10;
+	    int q = (int) (x / Math.pow(10,  size - i)) % 10;
+	    if (p != q) return false;
+	  }
+	  return true;
 	}
 }
