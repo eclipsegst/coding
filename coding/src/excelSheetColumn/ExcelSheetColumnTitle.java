@@ -12,6 +12,10 @@
  * 26 -> Z
  * 27 -> AA
  * 28 -> AB
+ * ...
+ * 52 -> AZ
+ * 53 -> BA
+ * ...
  */
 package excelSheetColumn;
 
