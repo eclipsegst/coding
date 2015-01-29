@@ -25,8 +25,15 @@ public class FactorialTrailingZeroes {
         n = tmp;
     }
     return sum;
+//    //alternative way 
+//    int result = 0;
+//    //To avoid the integer overflow ( e.g. 'n >=1808548329' )
+//    for(long long i=5; n/i>0 && i <= INT_MAX; i*=5){
+//        result += (n/i);
+//    }
+//    return result;
   }
-  // this solution will get run time limit
+  // this solution will get run limit exceeded error
   public static int trailingZeroes2(int n) {
     int count = 0;
     int c2 = 0;
