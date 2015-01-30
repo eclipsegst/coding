@@ -29,7 +29,7 @@ public class ExcelSheetColumnNumber {
   }
   
   public static void main(String[] args) {
-    String s = "AAA";
-    System.out.println(titleToNumber(s));
+    String s = "AA";
+    System.out.println(titleToNumber(s)); // 27
   }
 }

@@ -39,7 +39,7 @@ public class DecodeWays {
     return step[n];
   }
   public static void main(String[] args) {
-    String s = "12345";
+    String s = "1211";
     System.out.println(numDecodings(s)); // 3
   }
 }

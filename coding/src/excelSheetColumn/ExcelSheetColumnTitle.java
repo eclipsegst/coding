@@ -27,7 +27,7 @@ public class ExcelSheetColumnTitle {
   }
   
   public static void main(String[] args) {
-    System.out.println(convertToTitle(52));
-    System.out.println((char)('A'+2));
+    System.out.println(convertToTitle(52));  // AZ
+    System.out.println((char)('A'+2));       // C
   }
 }
