@@ -26,8 +26,7 @@
 </script>
 </head>
 <body class="dt-example">
-	<div class="container">
-		<section>
+
 			<h2>Leetcode<span></span></h2>
 
 			<table id="example" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
@@ -117,7 +116,6 @@
 					</tr>
 				</tbody>
 			</table>
-		</section>
-	</div>
+
 </body>
 </html>
