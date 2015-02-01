@@ -64,8 +64,8 @@
     </tr>
     <tr>
       <td>166</td>
-      <td><a href="https://oj.leetcode.com/problems/fraction-to-recurring-decimal/"></a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://oj.leetcode.com/problems/fraction-to-recurring-decimal/">Fraction to Recurring Decimal</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/fractionToRecurringDecimal/FractionToDecimal.java">Java</a></td>
       <td>Medium</td>
     </tr>
     <tr>
@@ -91,6 +91,12 @@
       <td>Min Stack</td>
       <td>Java</td>
       <td>Easy</td>
+    </tr>
+    <tr>
+      <td>151</td>
+      <td><a href="https://oj.leetcode.com/problems/reverse-words-in-a-string/">Reverse Words in a String</a></td>
+      <td><a href="">Java</a></td>
+      <td>Medium</td>
     </tr>
   </tbody>
 </table>
