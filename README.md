@@ -45,6 +45,12 @@
       <td>Medium</td>
     </tr>
     <tr>
+      <td>173</td>
+      <td><a href="https://oj.leetcode.com/problems/binary-search-tree-iterator/">Binary Search Tree Iterator</a></td>
+      <td>Java</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
       <td>172</td>
       <td>Factorial Trailing Zeroes</td>
       <td>Java</td>
@@ -70,7 +76,7 @@
     </tr>
     <tr>
       <td>164</td>
-      <td>Maximum</td>
+      <td>Maximum Gap</td>
       <td>Java</td>
       <td>Hard</td>
     </tr>
@@ -98,6 +104,13 @@
       <td><a href="">Java</a></td>
       <td>Medium</td>
     </tr>
+    <tr>
+      <td>94</td>
+      <td><a href="https://oj.leetcode.com/problems/binary-tree-inorder-traversal/">Binary Tree Inorder Traversal</a></td>
+      <td><a href="">Java</a></td>
+      <td>Medium</td>
+    </tr>
+
   </tbody>
 </table>
 </body>
