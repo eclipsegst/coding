@@ -52,20 +52,20 @@
     </tr>
     <tr>
       <td>172</td>
-      <td>Factorial Trailing Zeroes</td>
-      <td>Java</td>
+      <td><a href="https://oj.leetcode.com/problems/factorial-trailing-zeroes/">Factorial Trailing Zeroes</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/factorialTrailingZeroes/FactorialTrailingZeroes.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
       <td>170</td>
       <td>Two Sum III - Data structure design</td>
-      <td>Java</td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/two_sum/TwoSum.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
       <td>168</td>
-      <td>Excel Sheet Column Title</td>
-      <td>Java</td>
+      <td><a href="https://oj.leetcode.com/problems/excel-sheet-column-title/">Excel Sheet Column Title</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/excelSheetColumn/ExcelSheetColumnTitle.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
@@ -76,41 +76,46 @@
     </tr>
     <tr>
       <td>164</td>
-      <td>Maximum Gap</td>
-      <td>Java</td>
+      <td><a href="https://oj.leetcode.com/problems/maximum-gap/">Maximum Gap</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/maximumGap/Solution.java">Java</a></td>
       <td>Hard</td>
     </tr>
     <tr>
       <td>163</td>
       <td>Missing Ranges</td>
-      <td>Java</td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/missingRanges/MissingRanges.java">Java</a></td>
       <td>Medium</td>
     </tr>
     <tr>
-      <td>161</td>
-      <td>Intersection of Two Linked Lists</td>
-      <td>Java</td>
+      <td>160</td>
+      <td><a href="https://oj.leetcode.com/problems/intersection-of-two-linked-lists/">Intersection of Two Linked Lists</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/intersectionOfTwoLinkedLists/IntersectionOfTwoLinkedLists.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
       <td>155</td>
-      <td>Min Stack</td>
-      <td>Java</td>
+      <td><a href="https://oj.leetcode.com/problems/min-stack/">Min Stack</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/minStack/MinStack.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
       <td>151</td>
       <td><a href="https://oj.leetcode.com/problems/reverse-words-in-a-string/">Reverse Words in a String</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/reverseWords/ReverseWords.java">Java</a></td>
       <td>Medium</td>
     </tr>
     <tr>
       <td>94</td>
       <td><a href="https://oj.leetcode.com/problems/binary-tree-inorder-traversal/">Binary Tree Inorder Traversal</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/binaryTreeInorderTraversal/BinaryTreeInorderTraversal.java">Java</a></td>
       <td>Medium</td>
     </tr>
-
+    <tr>
+      <td>34</td>
+      <td><a href="https://oj.leetcode.com/problems/search-for-a-range/">Search for a Range</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/searchRange/SearchForRange.java">Java</a></td>
+      <td>Medium</td>
+    </tr>
   </tbody>
 </table>
 </body>
