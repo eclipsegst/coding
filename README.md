@@ -113,7 +113,13 @@
     <tr>
       <td>104</td>
       <td><a href="https://oj.leetcode.com/problems/maximum-depth-of-binary-tree/">Maximum Depth of Binary Tree</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/maximumDepthOfBinaryTree/MaxDepth.java">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td><a href="https://oj.leetcode.com/problems/same-tree/">Same Tree</a></td>
+      <td>Java</td>
       <td>Easy</td>
     </tr>
     <tr>
