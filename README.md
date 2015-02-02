@@ -105,6 +105,18 @@
       <td>Medium</td>
     </tr>
     <tr>
+      <td>111</td>
+      <td><a href="https://oj.leetcode.com/problems/minimum-depth-of-binary-tree/">Minimum Depth of Binary Tree</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/minimumDepthOfBinaryTree/MinDepth.java">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
+      <td>104</td>
+      <td><a href="https://oj.leetcode.com/problems/maximum-depth-of-binary-tree/">Maximum Depth of Binary Tree</a></td>
+      <td><a href="">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
       <td>94</td>
       <td><a href="https://oj.leetcode.com/problems/binary-tree-inorder-traversal/">Binary Tree Inorder Traversal</a></td>
       <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/binaryTreeInorderTraversal/BinaryTreeInorderTraversal.java">Java</a></td>
