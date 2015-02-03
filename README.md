@@ -160,9 +160,15 @@
     </tr>
     <tr>
       <td>83</td>
-      <td><a href="">Remove Duplicates from Sorted List</a></td>
-      <td><a href="https://oj.leetcode.com/problems/remove-duplicates-from-sorted-list/">Java</a></td>
+      <td><a href="https://oj.leetcode.com/problems/remove-duplicates-from-sorted-list/">Remove Duplicates from Sorted List</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/removeDuplicatesFromSortedList/RemoveDuplicatesFromSortedList.java">Java</a></td>
       <td>Easy</td>
+    </tr>
+    <tr>
+      <td>82</td>
+      <td><a href="https://oj.leetcode.com/problems/remove-duplicates-from-sorted-list-ii/">Remove Duplicates from Sorted List II</a></td>
+      <td><a href="">Java</a></td>
+      <td>Medium</td>
     </tr>
     <tr>
       <td>34</td>
