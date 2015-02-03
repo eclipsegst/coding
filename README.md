@@ -167,13 +167,19 @@
     <tr>
       <td>82</td>
       <td><a href="https://oj.leetcode.com/problems/remove-duplicates-from-sorted-list-ii/">Remove Duplicates from Sorted List II</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/removeDuplicatesfromSortedListII/RemoveDuplicatesfromSortedListII.java">Java</a></td>
       <td>Medium</td>
     </tr>
     <tr>
       <td>34</td>
       <td><a href="https://oj.leetcode.com/problems/search-for-a-range/">Search for a Range</a></td>
       <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/searchRange/SearchForRange.java">Java</a></td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><a href="https://oj.leetcode.com/problems/zigzag-conversion/">ZigZag Conversion</a></td>
+      <td><a href="">Java</a></td>
       <td>Medium</td>
     </tr>
   </tbody>
