@@ -105,6 +105,12 @@
       <td>Medium</td>
     </tr>
     <tr>
+      <td>112</td>
+      <td><a href="https://oj.leetcode.com/problems/path-sum/">Binary Tree Path Sum</a></td>
+      <td><a href="">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
       <td>111</td>
       <td><a href="https://oj.leetcode.com/problems/minimum-depth-of-binary-tree/">Minimum Depth of Binary Tree</a></td>
       <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/minimumDepthOfBinaryTree/MinDepth.java">Java</a></td>
@@ -113,7 +119,7 @@
     <tr>
       <td>107</td>
       <td><a href="https://oj.leetcode.com/problems/binary-tree-level-order-traversal-ii/">Binary Tree Level Order Traversal II</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/binaryTreeLevelOrderTraversalTwo/BinaryTreeLevelOrderTraversalTwo.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
