@@ -177,9 +177,27 @@
       <td>Medium</td>
     </tr>
     <tr>
+      <td>14</td>
+      <td><a href="https://oj.leetcode.com/problems/longest-common-prefix/">Longest Common Prefix</a></td>
+      <td><a href="">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><a href="https://oj.leetcode.com/problems/roman-to-integer/">Roman to Integer</a></td>
+      <td><a href="">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><a href="https://oj.leetcode.com/problems/integer-to-roman/">Integer to Roman</a></td>
+      <td><a href="">Java</a></td>
+      <td>Medium</td>
+    </tr>
+    <tr>
       <td>6</td>
       <td><a href="https://oj.leetcode.com/problems/zigzag-conversion/">ZigZag Conversion</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/zigZagConversion/ZigZagConversion.java">Java</a></td>
       <td>Medium</td>
     </tr>
   </tbody>
