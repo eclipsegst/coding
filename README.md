@@ -155,7 +155,13 @@
     <tr>
       <td>88</td>
       <td><a href="https://oj.leetcode.com/problems/merge-sorted-array/">Merge Sorted Array</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/mergeSortedArray/MergeSortedArray.java">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
+      <td>83</td>
+      <td><a href="">Remove Duplicates from Sorted List</a></td>
+      <td><a href="https://oj.leetcode.com/problems/remove-duplicates-from-sorted-list/">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
