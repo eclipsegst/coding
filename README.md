@@ -191,6 +191,12 @@
     <tr>
       <td>21</td>
       <td><a href="https://oj.leetcode.com/problems/merge-two-sorted-lists/">Merge Two Sorted Lists</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/mergeTwoSortedLists/MergeTwoSortedLists.java">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td><a href="https://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></td>
       <td><a href="">Java</a></td>
       <td>Easy</td>
     </tr>
