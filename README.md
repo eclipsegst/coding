@@ -107,7 +107,7 @@
     <tr>
       <td>125</td>
       <td><a href="https://oj.leetcode.com/problems/valid-palindrome/">Valid Palindrome</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/validPalindrome/ValidPalindrome.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
@@ -175,6 +175,12 @@
       <td><a href="https://oj.leetcode.com/problems/remove-duplicates-from-sorted-list-ii/">Remove Duplicates from Sorted List II</a></td>
       <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/removeDuplicatesfromSortedListII/RemoveDuplicatesfromSortedListII.java">Java</a></td>
       <td>Medium</td>
+    </tr>
+    <tr>
+      <td>66</td>
+      <td><a href="https://oj.leetcode.com/problems/plus-one/">Plus One</a></td>
+      <td><a href="">Java</a></td>
+      <td>Easy</td>
     </tr>
     <tr>
       <td>34</td>
