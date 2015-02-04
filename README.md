@@ -195,9 +195,15 @@
       <td>Easy</td>
     </tr>
     <tr>
+      <td>20</td>
+      <td><a href="s://oj.leetcode.com/problems/valid-parentheses/">Valid Parentheses </a></td>
+      <td><a href="">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
       <td>19</td>
       <td><a href="https://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/removeNthFromEnd/RemoveNthFromEnd.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
