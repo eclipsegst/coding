@@ -179,7 +179,7 @@
     <tr>
       <td>66</td>
       <td><a href="https://oj.leetcode.com/problems/plus-one/">Plus One</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/plusOne/PlusOne.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
@@ -189,9 +189,15 @@
       <td>Medium</td>
     </tr>
     <tr>
+      <td>21</td>
+      <td><a href="https://oj.leetcode.com/problems/merge-two-sorted-lists/">Merge Two Sorted Lists</a></td>
+      <td><a href="">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
       <td>14</td>
       <td><a href="https://oj.leetcode.com/problems/longest-common-prefix/">Longest Common Prefix</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/longestCommonPrefix/LongestCommonPrefix.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
