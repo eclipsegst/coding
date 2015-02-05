@@ -185,7 +185,7 @@
     <tr>
       <td>58</td>
       <td><a href="https://oj.leetcode.com/problems/length-of-last-word/">Length of Last Word</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/lengthOfLastWord/LengthOfLastWord.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
