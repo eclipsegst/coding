@@ -183,6 +183,18 @@
       <td>Easy</td>
     </tr>
     <tr>
+      <td>58</td>
+      <td><a href="https://oj.leetcode.com/problems/length-of-last-word/">Length of Last Word</a></td>
+      <td><a href="">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td><a href="https://oj.leetcode.com/problems/valid-sudoku/">Valid Sudoku</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/validSudoku/ValidSudoku.java">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
       <td>34</td>
       <td><a href="https://oj.leetcode.com/problems/search-for-a-range/">Search for a Range</a></td>
       <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/searchRange/SearchForRange.java">Java</a></td>
@@ -208,7 +220,7 @@
     </tr>
     <tr>
       <td>20</td>
-      <td><a href="s://oj.leetcode.com/problems/valid-parentheses/">Valid Parentheses </a></td>
+      <td><a href="https://oj.leetcode.com/problems/valid-parentheses/">Valid Parentheses </a></td>
       <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/validParentheses/IsValidParentheses.java">Java</a></td>
       <td>Easy</td>
     </tr>
