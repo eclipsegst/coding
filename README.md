@@ -189,9 +189,15 @@
       <td>Medium</td>
     </tr>
     <tr>
+      <td>28</td>
+      <td><a href="https://oj.leetcode.com/problems/implement-strstr/">Implement strStr() </a></td>
+      <td><a href="">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
       <td>26</td>
       <td><a href="https://oj.leetcode.com/problems/merge-two-sorted-lists/">Remove Duplicates from Sorted Array</a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/removeDuplicatesFromSortedArray/RemoveDuplicates.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
