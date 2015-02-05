@@ -189,6 +189,12 @@
       <td>Medium</td>
     </tr>
     <tr>
+      <td>26</td>
+      <td><a href="https://oj.leetcode.com/problems/merge-two-sorted-lists/">Remove Duplicates from Sorted Array</a></td>
+      <td><a href="">Java</a></td>
+      <td>Easy</td>
+    </tr>
+    <tr>
       <td>21</td>
       <td><a href="https://oj.leetcode.com/problems/merge-two-sorted-lists/">Merge Two Sorted Lists</a></td>
       <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/mergeTwoSortedLists/MergeTwoSortedLists.java">Java</a></td>
@@ -197,7 +203,7 @@
     <tr>
       <td>20</td>
       <td><a href="s://oj.leetcode.com/problems/valid-parentheses/">Valid Parentheses </a></td>
-      <td><a href="">Java</a></td>
+      <td><a href="https://github.com/eclipsegst/coding/blob/master/coding/src/validParentheses/IsValidParentheses.java">Java</a></td>
       <td>Easy</td>
     </tr>
     <tr>
