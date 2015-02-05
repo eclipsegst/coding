@@ -72,8 +72,8 @@ public class CommonDataStructure {
     /*
      * HashSet
      */
-    HashSet<Character> set = new HashSet<Character>();
-    HashSet<Character> setTwo = new HashSet<Character>();
+    Set<Character> set = new HashSet<Character>();
+    Set<Character> setTwo = new HashSet<Character>();
     set.add('a');
     set.add('b');
     set.add('a');// It will not be added to set since HashSet only keep unique element.
@@ -94,11 +94,28 @@ public class CommonDataStructure {
     set.size();   // size
     set.remove('a');
     set.clear();
-
+    
+    /*
+     * Set VS List
+     * - List can contain duplicate values but Set maintains only unique values.
+     * - List allows retrieval of data to be the same order in the way it is inserted.
+     *   But Set doesn't ensure the sequence in which data can be retrieved except LinkedHashSet.
+     * 
+     * HashSet VS TreeSet VS LinkedHashSet:
+     * - If you need a fast set, you should use HashSet which is implemented using a hash table.
+     *   Elements are not sorted. The add, remove and contains methods have constant time complexity O(1).
+     *   
+     * - If you need a sorted a set, then TreeSet should be used, which is implemented using a red-black tree.
+     *   Elements are sorted but the add, remove and contains has time complexity of O(log n).
+     *   
+     * - If you want to ensure the insertion order, LinkedHashSet should be used.
+     *   Elements are kept in the order of insertion. The time complexity of basic methods is O(1).
+     */
+    
     /*
      * ArrayList
      */
-    ArrayList<String> arrayList = new ArrayList<String>();
+    List<String> arrayList = new ArrayList<String>();
     arrayList.add("Google");// add an element, addAll() -> add another ArrayList
     arrayList.add("Facebook");
     arrayList.add("Microsoft");
@@ -120,6 +137,7 @@ public class CommonDataStructure {
      * two pointers for neighbor node hence the memory consumption is high in LinkedList comparatively.
      * 
      */
+    
     /*
      * LinkedList
      */
