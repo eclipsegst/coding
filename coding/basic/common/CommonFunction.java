@@ -32,9 +32,9 @@ public class CommonFunction {
     char[] charArray = s.toCharArray();
     System.out.println(Arrays.toString(charArray));
     // Convert String to Integer
-    int n = Character.getNumericValue("ca5".charAt(1));// "cc5".charAt(1), return 10 
-    System.out.println(n);// return 5
-    
+    int n1 = Character.getNumericValue("ca5".charAt(1));// "cc5".charAt(1), return 10 
+    System.out.println(n1);// return 5
+    System.out.println(Integer.parseInt("123"));
     // Convert Integer to String 
     System.out.println(String.valueOf("6"));
     System.out.println(Integer.toString(6));
