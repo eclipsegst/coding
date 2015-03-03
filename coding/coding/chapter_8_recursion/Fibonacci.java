@@ -26,7 +26,7 @@
  *  the total time is the sum of each assignment and sum of the previous two numbers.
  *  Time complexity: O(n)     
  */
-package chp8_recursion;
+package chapter_8_recursion;
 
 public class Fibonacci {
   // recursion solution, time complexity: O(2^n)
