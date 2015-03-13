@@ -41,7 +41,8 @@ public class CommonFunction {
     
     // Convert Integer to Character
     System.out.println(Character.toChars(65)); //return 'A'
-    
+    // Convert Integer to binary string
+    System.out.println(Integer.toBinaryString(11));//return "1011"
     /*
      * trim()
      * 
