@@ -33,7 +33,7 @@
 
   <h4>Note:</h4>
   <ul>
-    <li>Please check <a href="http://leetcode.tgic.me/">here</a> for a full Java solutions with solutions details and <a href="https://github.com/haoel/leetcode">here</a> for a full C++ solutions</li>
+    <li>Please check <a href="http://leetcode.tgic.me/">tg123</a> for a full Java solutions with solutions details and <a href="https://github.com/haoel/leetcode">haoel</a> for a full C++ solutions</li>
     <li>Please donate LeetCode <a href="https://leetcode.com/donate/">here</a></li>
   </ul>
 
