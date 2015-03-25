@@ -1,5 +1,6 @@
-package two_sum;
+package twosum;
 import java.util.HashMap;
+import java.util.Map;
 /*
  * Date: 2015-01-12 00:04:31
  * 
@@ -12,16 +13,7 @@ import java.util.HashMap;
  * Output: index1=1, index2=2
  * 
  */
-public class Solution {
-  public static void main(String[] args) {
-    System.out.println("Two Sum:");
-    int [] numbers = {2, 7, 11, 15};
-    int [] res = twoSum(numbers, 26);
-//    int [] res = twoSumSortedArray(numbers, 26);
-    System.out.println(res[0]);
-    System.out.println(res[1]);
-  }
-  
+public class TwoSum {
   public static int [] twoSum(int[] numbers, int target) {
     int[] result = new int[2];
     HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -61,5 +53,31 @@ public class Solution {
       }
     }
     throw new RuntimeException();
+  }
+  
+  //compact version
+  public int [] twoSumCompact(int[] numbers, int target) {
+    int[] res = new int[2];
+    Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    int t;
+    for (int i = 0; i < numbers.length; i++) {
+        t = target - numbers[i];
+        if (map.keySet().contains(t)) {
+                res[0] = map.get(t) + 1;
+                res[1] = i + 1;
+                break;
+        } else {
+            map.put(numbers[i], i);
+        }
+    }
+    return res;
+  }
+  
+  public static void main(String[] args) {
+    System.out.println("Two Sum:");
+    int [] numbers = {2, 7, 11, 15};
+    int [] res = twoSum(numbers, 26);
+    System.out.println(res[0]);
+    System.out.println(res[1]);
   }
 }
