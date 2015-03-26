@@ -1,4 +1,4 @@
-package longestPalindrome;
+package longestpalindrome;
 
 import java.util.Arrays;
 
@@ -9,8 +9,16 @@ import java.util.Arrays;
  * Given a string S, find the longest palindromic substring in S.
  * You may assume that the maximum length of S is 1000, 
  * and there exists one unique longest palindromic substring. 
+ * 
+ * Hints:
+ * isPalindrome in length n = inner length n - 2 isPalindromic AND (first char == last char)
+ * 
+ * check when len = 2, if there exist palindrome
+ * T[1][i] = (str[i] == str[i + 1])
+ * check when len >= 3, if there exist palindrome
+ * T[len - 1][start] = (T [len - 1 - 2] [start + 1] == true) && str[i] == str[i + len - 1])
  */
-public class Solution {
+public class LongestPalindrome {
   public static void main(String[] args) {
     //String s = "bacabacacab";
     String s = "aaaa";
