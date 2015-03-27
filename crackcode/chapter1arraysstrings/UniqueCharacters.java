@@ -2,12 +2,12 @@
  *  Author : Zhaolong Zhong
  *  Date   : Mar 2, 2015 9:04:34 PM
  *  
- *  Problem:
+ *  Problem: 1.1
  *  Implement an algorithm to determine if a string has all unique characters.
  *  What if you can not use addition data structures?
  *  
  */
-package chapter_1_arrays_strings;
+package chapter1arraysstrings;
 import java.util.HashMap;
 public class UniqueCharacters {
   // time complexity: O(n^2); space complexity: O(n)

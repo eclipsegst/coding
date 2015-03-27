@@ -1,9 +1,9 @@
 /**
  * Author: Zhaolong Zhong
  * Date  : Mar 7, 2015 6:47:34 PM
- *
+ * Problme: 1.5
  */
-package chapter_1_arrays_strings;
+package chapter1arraysstrings;
 
 // running time: O(n + k^2), n is the size or original string
 // k is the number of character, for example, if s = "aabccdeeaa", k = 6

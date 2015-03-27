@@ -1,9 +1,10 @@
 /**
  * Author: Zhaolong Zhong
  * Date  : Mar 5, 2015 4:43:58 PM
- *
+ * Problem: 1.3
+ * Given two strings, write a method to decide if one is permutation of the other.
  */
-package chapter_1_arrays_strings;
+package chapter1arraysstrings;
 
 import java.util.HashMap;
 

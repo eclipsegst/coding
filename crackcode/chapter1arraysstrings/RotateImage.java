@@ -1,9 +1,11 @@
 /**
  * Author: Zhaolong Zhong
  * Date  : Mar 8, 2015 10:22:32 PM
- *
+ * Problem: 1.6
+ * Given an image represneted by an N*N matrix, where each pixel in the image is 4 bytes,
+ * write a method to rotate the image by 90 degrees. Can you do this in place?
  */
-package chapter_1_arrays_strings;
+package chapter1arraysstrings;
 
 public class RotateImage {
   public void rotate(int[][] matrix, int n) {

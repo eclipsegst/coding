@@ -23,7 +23,7 @@
  *      Once we have found the ith smallest element, we can run through the array to find all values less than or equal to this element.
  *  
  */
-package chapter_18_hard;
+package chapter18hard;
 
 public class FindSmallestNNumbers {
   public static void main(String[] args) {

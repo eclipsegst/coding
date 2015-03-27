@@ -3,7 +3,7 @@
  *  Date  : Mar 2, 2015 8:30:13 PM
  *  
  */
-package chapter_1_arrays_strings;
+package chapter1arraysstrings;
 import java.util.ArrayList;
 
 public class DynamicallyResizingArray {

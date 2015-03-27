@@ -3,7 +3,7 @@
  * Date  : Mar 2, 2015 8:39:29 PM
  *
  */
-package chapter_1_arrays_strings;
+package chapter1arraysstrings;
 
 public class StringBuilder {
   // what is the running time of concatenating a list strings using following algrithm

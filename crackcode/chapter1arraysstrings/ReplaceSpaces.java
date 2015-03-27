@@ -3,7 +3,7 @@
  * Date  : Mar 6, 2015 6:05:59 PM
  *
  */
-package chapter_1_arrays_strings;
+package chapter1arraysstrings;
 
 public class ReplaceSpaces {
   public static char[] replaceSpaces(char[] str) {
