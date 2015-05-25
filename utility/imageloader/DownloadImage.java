@@ -12,11 +12,14 @@ package imageloader;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -26,8 +29,63 @@ import org.json.JSONObject;
 
 public class DownloadImage {
 
+  
   public static void main(String[] args) throws Exception {
+    // getHeroIcon();
     
+    getItemIcon();
+      
+    System.out.println("Complete download.");
+    
+  }
+  
+  @SuppressWarnings("finally")
+  public static void getItemIcon() throws Exception {
+    String url = "https://api.steampowered.com/IEconDOTA2_570/GetGameItems/V001/?key=&language=en";
+    String jsonStr = getJsonStr(url);
+    
+    JSONObject result = new JSONObject(jsonStr);
+    JSONObject listOfItem = result.getJSONObject("result");
+    JSONArray items = listOfItem.getJSONArray("items");
+    System.out.println(items.length());
+    
+    File outputFile = null;
+    outputFile = new File("output.txt");
+    
+    FileOutputStream fos = new FileOutputStream(outputFile);
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+    
+    for(int i = 0; i < items.length(); i++) {
+      System.out.println(i);
+      JSONObject item = items.getJSONObject(i);
+      String fullName = item.getString("name");
+      int id = item.getInt("id");
+      
+      String name = fullName.substring(5);
+      String tmpUrl = "http://cdn.dota2.com/apps/dota2/images/items/" + name + "_lg.png";
+      try {
+        downloader(tmpUrl, name);
+        
+        String keyValue = String.valueOf(id) + ":\"" + name + "\","; 
+             
+        bw.write(keyValue);
+        bw.newLine();
+        
+      } catch (MalformedURLException e){
+        System.out.println(name);
+      } finally {
+        continue;
+      }
+    }
+    
+    try{
+      bw.close();
+    } catch(IOException e) {
+        System.out.println("Error Closing File");
+    }
+  }
+  
+  public static void getHeroIcon() throws Exception {
     String url = "http://api.steampowered.com/IEconDOTA2_570/GetHeroes/v1?key=";
     String jsonStr = getJsonStr(url);
     
@@ -45,7 +103,6 @@ public class DownloadImage {
       downloader(tmpUrl, name);
       System.out.println(name);
     }
-
   }
   
   public static void downloader(String url, String name) throws IOException {
@@ -56,8 +113,9 @@ public class DownloadImage {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
+    
     InputStream in = new BufferedInputStream(imageUrl.openStream());
-    OutputStream out = new BufferedOutputStream(new FileOutputStream("C://Users//zztg2//Desktop//icon//" + name + "_sb.png"));
+    OutputStream out = new BufferedOutputStream(new FileOutputStream("C://Users//zztg2//Desktop//item_icon//" + name + "_lg.png"));
 
     for ( int i; (i = in.read()) != -1; ) {
         out.write(i);
