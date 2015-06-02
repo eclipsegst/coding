@@ -1,13 +1,5 @@
-package Sort;
+package linkedlist;
 
-class ListNode {
-  int val;
-  ListNode next;
-  ListNode (int x) {
-    val = x;
-    next = null;
-  }
-}
 public class SortLinkedList {
   public static ListNode mergeSortList(ListNode head) {
     if (head == null || head.next == null) {
