@@ -44,5 +44,13 @@ public class Lambdas {
       int result = e1.compareTo(e2);
       return result;
     });
+    
+    String[] strs = {"c", "l", "a", "r", "e"};
+    Arrays.asList(strs).sort((e1, e2) -> e1.compareTo(e2));
+    Arrays.asList(strs).forEach( e -> System.out.print(e));
+    
+    Arrays.asList(strs).sort((e1, e2) -> e2.compareTo(e1));
+    Arrays.asList(strs).forEach( e -> System.out.print(e));
+    
   }
 }
