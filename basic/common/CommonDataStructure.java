@@ -5,6 +5,7 @@
  */
 package common;
 import java.util.*;
+import java.util.Map.Entry;
 public class CommonDataStructure {
   public static void main(String[] args) {
     
@@ -65,9 +66,38 @@ public class CommonDataStructure {
      */
     HashMap<Character, Character> map = new HashMap<Character, Character>();
     map.put('a', 'A');
+    map.put('b', 'B');
     map.get('a');               // return 'A'
     map.values().contains('A'); // true
     map.keySet().contains('a'); // true
+    
+    for (Map.Entry<Character, Character> entry : map.entrySet()) {
+    	char key = entry.getKey();
+    	char value = entry.getValue();
+    	System.out.println(key + ":" + value);
+    }
+    
+    Iterator<Entry<Character, Character>> mapIt = map.entrySet().iterator();
+    while(mapIt.hasNext()) {
+    	Map.Entry<Character, Character> pair = (Map.Entry<Character, Character>)mapIt.next();
+    	System.out.println(pair.getKey() + ":" + pair.getValue());
+    	mapIt.remove();
+    }
+    
+    
+    /*
+     * TreeMap, map keys are sorted.
+     */
+    map.put('c', 'C');
+    map.put('d', 'D');
+    
+    Map<Character, Character> mapSorted = new TreeMap<Character, Character>(map);
+    
+    for (Map.Entry<Character, Character> entry : mapSorted.entrySet()) {
+    	char key = entry.getKey();
+    	char value = entry.getValue();
+    	System.out.println(key + ":" + value);
+    }
     
     /*
      * HashSet
