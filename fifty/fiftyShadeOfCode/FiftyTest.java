@@ -23,4 +23,20 @@ public class FiftyTest {
 		assertEquals("test SolutionTwoPointers", 4, twoSum.SolutionTwoPointers(numsSorted, 10)[0]);
 		assertEquals("test SolutionTwoPointers", 6, twoSum.SolutionTwoPointers(numsSorted, 10)[1]);
 	}
+	
+	@Test
+	public void testStrStr() {
+		StrStr strStr = new StrStr();
+		String haystack = "mississippi";
+		String needle = "issi";
+		assertEquals("test StrStr", 1, strStr.strStr(haystack, needle));
+	}
+	
+	@Test
+	public void testReverseWords() {
+		ReverseWords reverseWords = new ReverseWords();
+		String s = "the sky is blue";
+		String expected = "blue is sky the";
+		assertEquals("test reverseWords", expected, reverseWords.reverseWords(s));
+	}
 }
