@@ -38,5 +38,14 @@ public class FiftyTest {
 		String s = "the sky is blue";
 		String expected = "blue is sky the";
 		assertEquals("test reverseWords", expected, reverseWords.reverseWords(s));
+		assertEquals("test reverseWordsSimple", expected, reverseWords.reverseWordsSimple(s));
+	}
+	
+	@Test
+	public void testAtoi() {
+		Atoi atoi = new Atoi();
+		String s = "   -2147483649";
+		int expected = -2147483648;
+		assertEquals("test Atoi", expected, atoi.atoi(s));
 	}
 }
