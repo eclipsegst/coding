@@ -48,4 +48,14 @@ public class FiftyTest {
 		int expected = -2147483648;
 		assertEquals("test Atoi", expected, atoi.atoi(s));
 	}
+	
+	@Test
+	public void testIsNumber() {
+		IsNumber isNumber = new IsNumber();
+		String s = "  +0.1  ";
+		String ss = " -12e+20 ";
+		boolean expected = true;
+		assertEquals("testIsNumber", expected, isNumber.isNumber(s));
+		assertEquals("testIsNumber", expected, isNumber.isNumberE(ss));
+	}
 }
