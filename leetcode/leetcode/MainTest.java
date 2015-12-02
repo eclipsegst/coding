@@ -31,5 +31,14 @@ public class MainTest {
 		assertEquals("test Palindrome", true, solution.canPermutePalindromeTwo(s1));
 		assertEquals("test Palindrome", true, solution.canPermutePalindromeTwo(s2));
 	}
-
+	
+	@Test
+	public void testWordPattern() {
+		WordPattern solution = new WordPattern();
+		String pattern = "abba";
+		String str1 = "dog cat cat dog";
+		String str2 = "dog cat cat fish";
+		assertEquals("test WordPattern", true, solution.wordPattern(pattern, str1));
+		assertEquals("test WordPattern", false, solution.wordPattern(pattern, str2));
+	}
 }

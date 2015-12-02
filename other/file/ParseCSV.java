@@ -24,8 +24,10 @@ public class ParseCSV {
 			System.out.println(Arrays.toString(strs));
 			int total = 0;
 			while ((line = br.readLine()) != null) {
-				strs = line.split(",");
+				// -1 will keep the tailing empty string
+				strs = line.split(",",-1);
 				if (total < 10) {
+					System.out.println(line);
 					System.out.println(Arrays.toString(strs));
 				}
 				total++;
@@ -50,8 +52,12 @@ public class ParseCSV {
 
             String data = new String(inputStreamBuffer, "UTF-8");
             String[] lines = data.split("\n");
+            // remove quotes '"', and skip ',' in quotes, keep trailing empty string
+            String regex = "\"?(,|$)(?=(([^\"]*\"){2})*[^\"]*$) *\"?";
+            String[] strs = lines[0].replaceAll("^\"", "").split(regex, -1);
             System.out.println(lines[0]);
             System.out.println(lines[1]);
+            System.out.println(Arrays.toString(strs));
             
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -61,7 +67,7 @@ public class ParseCSV {
 	
 	public static void main(String[] args) throws IOException {
 		long startTime = System.currentTimeMillis();
-		parseCSV();
+		parseCSV2();
 		long endTime = System.currentTimeMillis();
 		long totalTime = endTime - startTime;
 		System.out.println(totalTime);
