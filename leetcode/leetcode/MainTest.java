@@ -41,4 +41,11 @@ public class MainTest {
 		assertEquals("test WordPattern", true, solution.wordPattern(pattern, str1));
 		assertEquals("test WordPattern", false, solution.wordPattern(pattern, str2));
 	}
+	
+	@Test
+	public void testFlipGame() {
+		FlipGame solution = new FlipGame();
+		String s = "++++";
+		assertEquals("test FlipGame", 3, solution.possibleNextMoves(s).size());
+	}
 }
