@@ -48,4 +48,13 @@ public class MainTest {
 		String s = "++++";
 		assertEquals("test FlipGame", 3, solution.possibleNextMoves(s).size());
 	}
+	
+	@Test
+	public void testUglyNumber() {
+		UglyNumber solution = new UglyNumber();
+		int n = 6;
+		int m = 14;
+		assertEquals("test UglyNumber", true, solution.isUglyNumber(n));
+		assertEquals("test UglyNumber", false, solution.isUglyNumber(m));
+	}
 }
