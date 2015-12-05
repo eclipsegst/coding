@@ -57,4 +57,12 @@ public class MainTest {
 		assertEquals("test UglyNumber", true, solution.isUglyNumber(n));
 		assertEquals("test UglyNumber", false, solution.isUglyNumber(m));
 	}
+	
+	@Test
+	public void testHappyNumber() {
+		HappyNumber solution = new HappyNumber();
+		int n = 19;
+		assertEquals("test HappyNumber", true, solution.isHappy(n));
+		
+	}
 }
