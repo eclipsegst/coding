@@ -58,4 +58,12 @@ public class FiftyTest {
 		assertEquals("testIsNumber", expected, isNumber.isNumber(s));
 		assertEquals("testIsNumber", expected, isNumber.isNumberE(ss));
 	}
+	
+	@Test
+	public void testLongestSubstring() {
+		LongestSubstring solution = new LongestSubstring();
+		String s = "abcabcbb";
+		assertEquals("test LongestSubstring", 3, solution.lengthOfLongestSubstring(s));
+		assertEquals("test LongestSubstring", 3, solution.lengthOfLongestSubstringTwo(s));
+	}
 }
