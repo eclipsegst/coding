@@ -66,4 +66,11 @@ public class FiftyTest {
 		assertEquals("test LongestSubstring", 3, solution.lengthOfLongestSubstring(s));
 		assertEquals("test LongestSubstring", 3, solution.lengthOfLongestSubstringTwo(s));
 	}
+	
+	@Test
+	public void testMissingRanges() {
+		MissingRanges solution = new MissingRanges();
+		int[] vals = new int[] {0, 1, 3, 50, 75};
+		assertEquals("test MissingRanges", "2", solution.findMissingRanges(vals, 0, 99).get(0));
+	}
 }
