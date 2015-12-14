@@ -56,4 +56,31 @@ public class BinaryTree {
 		}
 		return false;
 	}
+	
+	// O(n^2) runtime, O(n) stack space - brute force top-down recursion
+	public boolean isBalanced(TreeNode root) {
+		if (root == null) return true;
+		return Math.abs(maxDepth(root.left) - maxDepth(root.right)) <= 1
+				&& isBalanced(root.left)
+				&& isBalanced(root.right);
+	}
+	
+	private int maxDepth(TreeNode root) {
+		if (root == null) return 0;
+		return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+	}
+	
+	//O(n) runtime, O(n) stack space - bottom-up recursion
+	public boolean isBalancedBetter(TreeNode root) {
+		return maxDepthBetter(root) != -1;
+	}
+	
+	private int maxDepthBetter(TreeNode root) {
+		if (root == null) return 0;
+		int l = maxDepthBetter(root.left);
+		if (l == -1) return -1;
+		int r = maxDepthBetter(root.right);
+		if (r == -1) return -1;
+		return (Math.abs(l - r) <= 1) ? (Math.max(l, r) + 1) : -1;
+	}
 }
