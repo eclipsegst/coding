@@ -83,4 +83,19 @@ public class BinaryTree {
 		if (r == -1) return -1;
 		return (Math.abs(l - r) <= 1) ? (Math.max(l, r) + 1) : -1;
 	}
+	
+	// Binary tree upside down
+	public TreeNode upsideDownBinaryTree(TreeNode root) {
+		TreeNode p = root, parent = null, parentRight = null;
+		while (p != null) {
+			TreeNode left = p.left;
+			p.left = parentRight;
+			parentRight = p.right;
+			p.right = parent;
+			parent = p;
+			p = left;
+		}
+		
+		return parent;
+	}
 }
