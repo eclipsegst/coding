@@ -80,4 +80,15 @@ public class FiftyTest {
 		int n = 1234;
 		assertEquals("test ReverseInteger", 4321, solution.reverse(n));
 	}
+	
+	@Test
+	public void testMaximumSubarray() {
+		int[] sum = new int[] {2, 1, -3, 4, -1, 2, 1, -5, 4};
+		int[] pro = new int[] {2, 3, -2, 4};
+		int expected = 6;
+		
+		MaximumSubarray solution = new MaximumSubarray();
+		assertEquals("test MaximumSumSubarray", expected, solution.maxSumSubarray(sum));
+		assertEquals("test MaximumProductSubarray", expected, solution.maxProductSubarray(pro));
+	}
 }
