@@ -82,6 +82,14 @@ public class FiftyTest {
 	}
 	
 	@Test
+	public void testUniquePath() {
+		UniquePaths solution = new UniquePaths();
+		int m = 3, n = 7;
+		int expected = 28;
+		assertEquals("test UniquePath", expected, solution.uniquePaths(m, n));
+	}
+	
+	@Test
 	public void testMaximumSubarray() {
 		int[] sum = new int[] {2, 1, -3, 4, -1, 2, 1, -5, 4};
 		int[] pro = new int[] {2, 3, -2, 4};
