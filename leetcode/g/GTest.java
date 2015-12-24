@@ -10,10 +10,15 @@ import org.junit.Test;
 public class GTest {
 
 	@Test
-	public void test() {
+	public void testValidParentheses() {
 		ValidParentheses sol = new ValidParentheses();
 		String s = "{}([])";
 		assertEquals("test ValidParentheses", true, sol.isValidParenthese(s));
 	}
 
+	@Test
+	public void testStrobogrammaticNumber() {
+		StrobogrammaticNumber solution = new StrobogrammaticNumber();
+		assertEquals("test StrobogrammaticNumber", true, solution.isStrobogrammatic("69"));
+	}
 }
