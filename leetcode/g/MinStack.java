@@ -14,8 +14,8 @@ import java.util.Stack;
  * - getMin() -- Retrieve the minimum element in the stack.
  */
 public class MinStack {
-	Stack<Integer> stack = new Stack<>();
-	Stack<Integer> minStack = new Stack<>();
+	private Stack<Integer> stack = new Stack<>();
+	private Stack<Integer> minStack = new Stack<>();
 	
 	public void push(int x) {
 		stack.push(x);
@@ -35,5 +35,23 @@ public class MinStack {
 	
 	public int getMin() {
 		return minStack.peek();
+	}
+	
+	public static void main(String[] args) {
+		MinStack solution = new MinStack();
+		int[] nums = new int[] {4, 1, 2, 5, 3};
+		
+		for (int n : nums) {
+			solution.push(n);
+			System.out.print(solution.getMin() + " ");
+		}
+		
+		System.out.println();
+		System.out.println("top: " + solution.top());
+		System.out.println("min: " + solution.getMin());
+		solution.pop();
+		solution.pop();
+		System.out.println("top: " + solution.top());
+		System.out.println("min: " + solution.getMin());
 	}
 }
