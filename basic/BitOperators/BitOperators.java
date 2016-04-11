@@ -120,6 +120,10 @@ public class BitOperators {
     System.out.println( "-5 << 1 = " + (-5 << 1) ); // 1...1010 = -5, left shift 1 space, 1...0110
     
     System.out.println("0xffffffff = " + 0xffffffff);
-    
+   
+    for(int i = 1; i <=10; i++) {
+    	int j = i << 1;
+    	System.out.println(i + ": 1<<=" + i + ", " + j)
+;    }
   }
 }
