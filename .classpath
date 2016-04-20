@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="basic"/>
-	<classpathentry kind="src" path="crackcode"/>
 	<classpathentry kind="src" path="java8"/>
 	<classpathentry kind="src" path="other"/>
-	<classpathentry kind="src" path="leetcode"/>
-	<classpathentry kind="src" path="json"/>
+	<classpathentry kind="src" path="challenge"/>
 	<classpathentry kind="src" path="utility"/>
 	<classpathentry kind="src" path="datastructure"/>
 	<classpathentry kind="src" path="algorithm"/>
-	<classpathentry kind="src" path="hackerrank"/>
-	<classpathentry kind="src" path="fifty"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="libs/java-json.jar"/>
