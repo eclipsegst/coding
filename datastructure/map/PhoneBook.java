@@ -21,7 +21,7 @@
     Not found
     harry=12299933
  */
-package hashmap;
+package map;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -6,13 +6,12 @@
  * This class extends HashMap and maintains a linked list of the entries in the map, 
  * in the order in which they were inserted
  */
-package hashmap;
+package map;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
-
 
 public class LinkedHashMapDemo {
   @SuppressWarnings({"rawtypes", "unchecked"})
