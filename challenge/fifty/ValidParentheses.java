@@ -1,4 +1,4 @@
-package fiftyShadeOfCode;
+package fifty;
 
 import java.util.HashMap;
 import java.util.Map;

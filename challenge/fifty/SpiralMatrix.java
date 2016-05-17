@@ -1,4 +1,4 @@
-package fiftyShadeOfCode;
+package fifty;
 
 import java.util.ArrayList;
 import java.util.List;

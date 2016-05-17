@@ -1,4 +1,4 @@
-package fiftyShadeOfCode;
+package fifty;
 
 /**
  * @author Zhaolong Zhong Nov 25, 2015

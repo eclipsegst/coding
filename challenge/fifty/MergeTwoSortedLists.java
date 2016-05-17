@@ -1,4 +1,4 @@
-package fiftyShadeOfCode;
+package fifty;
 
 import linkedlist.ListNode;
 
