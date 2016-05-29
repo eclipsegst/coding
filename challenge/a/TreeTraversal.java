@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Deque;
+import java.util.LinkedList;
 
 import binaryTree.TreeNode;
 
@@ -66,6 +67,67 @@ public class TreeTraversal {
 		}
 	}
 	
+	public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+		List<List<Integer>> result = new ArrayList<List<Integer>>();
+		travel(result, 0, root);
+		
+		return result;
+	}
+	
+	private void travel(List<List<Integer>> result, int level, TreeNode cur) {
+		if (cur == null) {
+			return;
+		}
+		
+		if (result.size() <= level) {
+			result.add(new ArrayList<Integer>());
+		}
+		
+		if (level % 2 == 0) {
+			result.get(level).add(cur.value);
+		} else {
+			result.get(level).add(0, cur.value);
+		}
+		
+		travel(result, level + 1, cur.left);
+		travel(result, level + 1, cur.right);
+	}
+	
+	public List<List<Integer>> zigzagLevelOrderDeque(TreeNode root) {
+		if (root == null) {
+			return null;
+		}
+		
+		List<List<Integer>> result = new ArrayList<List<Integer>>();
+		
+		Deque<TreeNode> deque = new LinkedList<TreeNode>();
+		deque.add(null);
+		deque.add(root);
+		
+		while (deque.size() > 1) {
+			TreeNode node = deque.poll();
+			if (node == null && deque.getFirst() == null) {
+				break;
+			} else if (node == null) {
+				result.add(new ArrayList<Integer>());
+				deque.add(null);
+				continue;
+			}
+			
+			result.get(result.size() - 1).add(node.value);
+			
+			if (node.left != null) {
+				deque.add(node.left);
+			}
+			
+			if (node.right != null) {
+				deque.add(node.right);
+			}
+		}
+		
+		return result;
+	}
+	
 	public void clear() {
 		list.clear();
 	}
@@ -101,5 +163,11 @@ public class TreeTraversal {
 		solution.clear();
 		solution.levelorder(r3);
 		System.out.println(Arrays.toString(solution.list.toArray()));
+		
+		List<List<Integer>> result = solution.zigzagLevelOrder(r3);
+		System.out.println(Arrays.toString(result.toArray()));
+		
+		List<List<Integer>> result2 = solution.zigzagLevelOrderDeque(r3);
+		System.out.println(Arrays.toString(result2.toArray()));
 	}
 }
