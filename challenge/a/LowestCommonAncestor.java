@@ -28,4 +28,16 @@ public class LowestCommonAncestor {
 		
 		return left == null ? right : left;
 	}
+	
+	public TreeNode lowestCommonAncestorInBinarySearchTree(TreeNode root, TreeNode p, TreeNode q) {
+		if (root.value > p.value && root.value > q.value) {
+			return lowestCommonAncestorInBinarySearchTree(root.left, p, q);
+		}
+		
+		if (root.value < p.value && root.value < q.value) {
+			return lowestCommonAncestorInBinarySearchTree(root.left, p, q);
+		}
+		
+		return root;
+	}
 }

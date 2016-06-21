@@ -2,6 +2,8 @@ package unionfind;
 
 /**
  * @author Zhaolong Zhong Apr 3, 2016
+ * 
+ * Runtime: (M + N) lg*N, M union on N objects.
  */
 public class UnionFind {
 	private int[] id; // id[p] is the id of the component containing p
@@ -22,8 +24,9 @@ public class UnionFind {
 	public int find(int i) {
 		while (i != id[i]) {
 			// simpler one-pass variant (path halving): make every other node in path point to its grandparent
-			id[i] = id[id[i]];
-			i = id[i];
+//			id[i] = id[id[i]];
+//			i = id[i];
+			i = id[id[i]];
 		}
 		
 		return i;
