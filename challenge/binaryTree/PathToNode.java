@@ -9,13 +9,38 @@ import java.util.List;
 public class PathToNode {
 	public List<TreeNode> path = new ArrayList<TreeNode>();
 	
-	public Boolean findPath(TreeNode root, TreeNode dest) {
+	public Boolean findPath(TreeNode root, TreeNode target) {
 		if (root == null) {
 			return false;
 		}
 		
-		if (root == dest || findPath(root.left, dest) || findPath(root.right, dest)) {
+		if (root == target || findPath(root.left, target) || findPath(root.right, target)) {
 			path.add(root);
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public List<TreeNode> pathNodes(TreeNode root, TreeNode target) {
+		List<TreeNode> result = new ArrayList<TreeNode>();
+		
+		if (root == null) {
+			return result;
+		}
+		
+		findPath(root, target, result);
+		
+		return result;
+	}
+	
+	public boolean findPath(TreeNode root, TreeNode target, List<TreeNode> result) {
+		if (root == null) {
+			return false;
+		}
+		
+		if (root == target || findPath(root.left, target, result) || findPath(root.right, target, result)) {
+			result.add(root);
 			return true;
 		}
 		

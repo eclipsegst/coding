@@ -1,6 +1,8 @@
 package a;
 
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Set;
 
 /**
@@ -44,12 +46,15 @@ public class WordLadder {
 			}
 			
 			Set<String> temp = new HashSet<String>();
+			// loop all the words in beginSet and find possible mutations
 			for (String word : beginSet) {
 				char[] chars = word.toCharArray();
 				
+				// mutate each character
 				for (int i = 0; i < chars.length; i++) {
+					// mutate the character from a to z
 					for (char c = 'a'; c <= 'z'; c++) {
-						char old = chars[i];
+						char original = chars[i]; // we need to change back to original
 						chars[i] = c;
 						String target = String.valueOf(chars);
 						
@@ -61,7 +66,7 @@ public class WordLadder {
 							temp.add(target);
 							visited.add(target);
 						}
-						chars[i] = old;
+						chars[i] = original;
 					}
 					
 				}
@@ -69,6 +74,52 @@ public class WordLadder {
 			
 			beginSet = temp;
 			len++;
+		}
+		
+		return 0;
+	}
+	//BFS
+	public int ladderLengthBFS(String beginWord, String endWord, Set<String> wordList) {
+		if (beginWord == null || endWord == null || beginWord.length() == 0 || endWord.length() == 0 || beginWord.length() != endWord.length()) {
+			return 0;
+		}
+		
+		Queue<String> queue = new LinkedList<String>();
+		Set<String> visited = new HashSet<String>();
+		
+		int len = 1;
+		int lastNum = 1;//if beginWord's mutations have two element that belong to wordList, then lastNum will be two
+		int curNum = 0;// the number of current word's mutations that are in wordList
+		
+		queue.offer(beginWord);
+		visited.add(beginWord);
+		
+		while (!queue.isEmpty()) {
+			String cur = queue.poll();
+			lastNum--;
+			
+			for (int i = 0; i < cur.length(); i++) {
+				char[] curs = cur.toCharArray();
+				for (char c = 'a'; c <= 'z'; c++) {
+					curs[i] = c;
+					String temp = new String(curs);
+					if (temp.equals(endWord)) {
+						return len + 1;
+					}
+					
+					if (wordList.contains(temp) && !visited.contains(temp)) {
+						curNum++;
+						queue.offer(temp);
+						visited.add(temp);
+					}
+				}
+			}
+			
+			if (lastNum == 0) {
+				lastNum = curNum;
+				curNum = 0;
+				len++;
+			}
 		}
 		
 		return 0;
@@ -86,5 +137,6 @@ public class WordLadder {
 		wordList.add("log");
 		
 		System.out.println(solution.ladderLength(beginWord, endWord, wordList));
+		System.out.println(solution.ladderLengthBFS(beginWord, endWord, wordList));
 	}
 }

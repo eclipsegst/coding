@@ -115,6 +115,7 @@ public class Islands {
 		return uf.count;
 	}
 	
+	// Runtime: (M + N) lg*N, M union on N objects.
 	static class IslandsUnionFind {
 		int[] id;
 		int[] size;

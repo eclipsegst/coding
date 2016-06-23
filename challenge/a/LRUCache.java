@@ -34,38 +34,44 @@ public class LRUCache {
 	
 	public int get(int key) {
 		if (map.containsKey(key)) {
-			Node n = map.get(key);
-			remove(n);
-			setHead(n);
-			return n.value;
+			Node node = map.get(key);
+			remove(node);
+			setHead(node);
+			return node.value;
 		}
 		return -1;
 	}
 	
-	public void remove(Node n) {
-		if (n.pre != null) {
-			n.pre.next = n.next;
+	public void remove(Node node) {
+		if (node.pre != null) {
+			node.pre.next = node.next;
 		} else {
-			head = n.next;
+			// node is head
+			head = node.next;
 		}
 		
-		if (n.next != null) {
-			n.next.pre = n.pre;
+		if (node.next != null) {
+			node.next.pre = node.pre;
 		} else {
-			end = n.pre;
+			// node is end
+			end = node.pre;
 		}
 	}
 	
-	public void setHead(Node n) {
-		n.next = head;
-		n.pre = null;
+	public void setHead(Node node) {
+		node.pre = null;
+		node.next = head;
 		
+		// head becomes the second node
+		// we need to set head.pre since we have a new head
 		if (head != null) {
-			head.pre = n;
+			head.pre = node;
 		}
 		
-		head = n;
+		head = node;
 		
+		// when we add the first node,
+		// we have only one node
 		if (end == null) {
 			end = head;
 		}
@@ -82,11 +88,9 @@ public class LRUCache {
 			if (map.size() >= CAPACITY) {
 				map.remove(end.key);
 				remove(end);
-				setHead(newNode);
-			} else {
-				setHead(newNode);
 			}
 			
+			setHead(newNode);
 			map.put(key, newNode);
 		}
 	}

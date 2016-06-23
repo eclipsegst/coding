@@ -25,7 +25,7 @@ public class ReverseWordsII {
 			}
 			
 			reverse(s, left, right - 1);
-			right++;
+			right++; // because current character is ' '
 		}
 	}
 	
