@@ -39,7 +39,7 @@ public class ProductExceptSelf {
         return result;
     }
 	
-	//Runtime: O(n), space: O(1)
+	//Runtime: O(n), space: O(n)
 	public int[] productExceptSelf(int[] nums) {
 		int[] result = new int[nums.length];
 		result[nums.length - 1] = 1;
@@ -52,9 +52,33 @@ public class ProductExceptSelf {
 		
 		for (int i = 0; i < nums.length; i++) {
 			result[i] = result[i] * left;
-			left = left * nums[i];
+			left = left * nums[i]; //keep tracking of all the left side multiply result
 		}
 		
 		return result;
+	}
+	
+	public void productExceptSelfTwo(int[] nums) {
+		if (nums == null || nums.length == 0) {
+			return;
+		}
+		
+		int[] result = new int[nums.length];
+		result[nums.length - 1] = 1;
+		
+		for (int i = nums.length - 2; i >= 0; i--) {
+			result[i] = result[i + 1] * nums[i + 1];
+		}
+		
+		int left = 1;
+		
+		for (int i = 0; i < nums.length; i++) {
+			result[i] = result[i] * left;
+			left *= nums[i];
+		}
+		
+		for (int i = 0; i < nums.length; i++) {
+			nums[i] = result[i];
+		}
 	}
 }
