@@ -26,7 +26,7 @@ public class BinaryTreePreorder {
 			return;
 		}
 		
-		result.add(root.value);
+		result.add(root.val);
 		preorderHelper(root.left, result);
 		preorderHelper(root.right, result);
 	}
@@ -47,7 +47,7 @@ public class BinaryTreePreorder {
 				cur = cur.left;
 			} else {
 				cur = stack.pop();
-				result.add(cur.value);
+				result.add(cur.val);
 				cur = cur.right;
 			}
 		}

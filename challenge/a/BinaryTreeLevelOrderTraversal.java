@@ -59,7 +59,7 @@ public class BinaryTreeLevelOrderTraversal {
         			queue.add(END);
         		}
         	} else {
-        		currentLevel.add(node.value);
+        		currentLevel.add(node.val);
         		if (node.left != null) {
         			queue.add(node.left);
         		}

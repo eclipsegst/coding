@@ -30,11 +30,11 @@ public class LowestCommonAncestor {
 	}
 	
 	public TreeNode lowestCommonAncestorInBinarySearchTree(TreeNode root, TreeNode p, TreeNode q) {
-		if (root.value > p.value && root.value > q.value) {
+		if (root.val > p.val && root.val > q.val) {
 			return lowestCommonAncestorInBinarySearchTree(root.left, p, q);
 		}
 		
-		if (root.value < p.value && root.value < q.value) {
+		if (root.val < p.val && root.val < q.val) {
 			return lowestCommonAncestorInBinarySearchTree(root.left, p, q);
 		}
 		

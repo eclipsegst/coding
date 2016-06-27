@@ -7,7 +7,7 @@ public class BinarySearchTree {
 //  public Node root;
   public static void main(String[] args){
     TreeNode root = new TreeNode(5);
-    System.out.println("Building tree with root value " + root.value);
+    System.out.println("Building tree with root value " + root.val);
     insert(root, 1);
     insert(root, 8);
     insert(root, 6);
@@ -34,13 +34,13 @@ public class BinarySearchTree {
   }
   
   public static void insert(TreeNode node, int value){
-    if(value < node.value){
+    if(value < node.val){
       if(node.left != null){
         insert(node.left, value);
       }else{
         node.left = new TreeNode(value);
       }
-    }else if(value > node.value){
+    }else if(value > node.val){
       if(node.right != null){
         insert(node.right, value);
       }else{
@@ -59,7 +59,7 @@ public class BinarySearchTree {
     while(currNode.left != null){
       currNode = currNode.left;
     }
-    return currNode.value;
+    return currNode.val;
   }
   
   public static int findMaxium(TreeNode node){
@@ -70,14 +70,14 @@ public class BinarySearchTree {
     while(currNode.right != null){
       currNode = currNode.right;
     }
-    return currNode.value;
+    return currNode.val;
   }
   
   /*In-Order traverse the tree in recursive way*/
   public static void inOrderTraversalRecursive(TreeNode node) {
     if (node != null) {
       inOrderTraversalRecursive(node.left);
-      System.out.print(node.value);
+      System.out.print(node.val);
       inOrderTraversalRecursive(node.right);
     }
   }
@@ -95,7 +95,7 @@ public class BinarySearchTree {
 			cur = cur.left;
 		}else{
 			cur = s.pop();
-			res.add(cur.value);
+			res.add(cur.val);
 			cur = cur.right;
 		}
 	}
@@ -118,11 +118,11 @@ public class BinarySearchTree {
 			  cur = cur.left;
 		  }else{
 			  next.right = null;
-			  res.add(cur.value);
+			  res.add(cur.val);
 			  cur = cur.right;
 		  }
 	  }else{
-		  res.add(cur.value);
+		  res.add(cur.val);
 		  cur = cur.right;
 	  }
 	}
@@ -132,7 +132,7 @@ public class BinarySearchTree {
   /*Pre-Order traverse the tree in recursive way*/
   public static void preOrderTraversalRec(TreeNode node){
     if (node != null) {
-      System.out.print(node.value);
+      System.out.print(node.val);
       preOrderTraversalRec(node.left);
       preOrderTraversalRec(node.right);
     }
@@ -143,22 +143,22 @@ public class BinarySearchTree {
     if (node != null) {
       postOrderTraverseRec(node.left);
       postOrderTraverseRec(node.right);
-      System.out.print(node.value);
+      System.out.print(node.val);
     }
   }
 
   public static void printFrontToBack(TreeNode node, int camera) {
     if (node == null)
       return;
-    if (node.value > camera) {
+    if (node.val > camera) {
       // print in order
       printFrontToBack(node.left, camera);
-      System.out.println("  Traversed " + node.value);
+      System.out.println("  Traversed " + node.val);
       printFrontToBack(node.right, camera);
-    } else if (node.value < camera) {
+    } else if (node.val < camera) {
       // print reverse order
       printFrontToBack(node.right, camera);
-      System.out.println("  Traversed " + node.value);
+      System.out.println("  Traversed " + node.val);
       printFrontToBack(node.left, camera);
     } else {
       // order doesn't matter

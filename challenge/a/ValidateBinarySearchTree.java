@@ -30,11 +30,11 @@ public class ValidateBinarySearchTree {
 				cur = cur.left;
 			} else {
 				cur = stack.pop();
-				if (cur.value <= last) {
+				if (cur.val <= last) {
 					return false;
 				}
 				
-				last = cur.value;
+				last = cur.val;
 				cur = cur.right;
 			}
 		}

@@ -24,7 +24,7 @@ public class SerializeBinaryTree {
         	return "#";
         }
         
-        return  "" + root.value + " " + serialize(root.left) + " " + serialize(root.right);
+        return  "" + root.val + " " + serialize(root.left) + " " + serialize(root.right);
     }
 
     // Decodes your encoded data to tree.

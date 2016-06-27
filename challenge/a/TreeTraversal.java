@@ -21,7 +21,7 @@ public class TreeTraversal {
 		}
 		
 		inorder(root.left);
-		list.add(root.value);
+		list.add(root.val);
 		inorder(root.right);
 	}
 	
@@ -30,7 +30,7 @@ public class TreeTraversal {
 			return;
 		}
 		
-		list.add(root.value);
+		list.add(root.val);
 		preorder(root.left);
 		preorder(root.right);
 	}
@@ -42,7 +42,7 @@ public class TreeTraversal {
 		
 		postorder(root.left);
 		postorder(root.right);
-		list.add(root.value);
+		list.add(root.val);
 	}
 	
 	public void levelorder(TreeNode root) {
@@ -55,7 +55,7 @@ public class TreeTraversal {
 		while (!queue.isEmpty()) {
 			TreeNode tree = queue.getFirst();
 			queue.removeFirst();
-			list.add(tree.value);
+			list.add(tree.val);
 			
 			if (tree.left != null) {
 				queue.add(tree.left);
@@ -84,9 +84,9 @@ public class TreeTraversal {
 		}
 		
 		if (level % 2 == 0) {
-			result.get(level).add(cur.value);
+			result.get(level).add(cur.val);
 		} else {
-			result.get(level).add(0, cur.value);
+			result.get(level).add(0, cur.val);
 		}
 		
 		travel(result, level + 1, cur.left);
@@ -114,7 +114,7 @@ public class TreeTraversal {
 				continue;
 			}
 			
-			result.get(result.size() - 1).add(node.value);
+			result.get(result.size() - 1).add(node.val);
 			
 			if (node.left != null) {
 				deque.add(node.left);
