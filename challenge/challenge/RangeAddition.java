@@ -66,12 +66,8 @@ public class RangeAddition {
 			}
 		}
 		
-		int sum = result[length - 1];
-		
 		for (int i = length - 2; i >= 0; i--) {
-			int t = sum + result[i];
-			result[i] += sum;
-			sum = t;
+			result[i] += result[i + 1];
 		}    
         
         return result;
