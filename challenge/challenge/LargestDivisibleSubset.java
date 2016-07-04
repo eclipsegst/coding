@@ -2,9 +2,7 @@ package challenge;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author Zhaolong Zhong Jun 27, 2016
