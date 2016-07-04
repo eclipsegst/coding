@@ -1,0 +1,61 @@
+package challenge;
+
+/**
+ * @author Zhaolong Zhong Jul 3, 2016
+ * 
+ * Odd Even Linked List
+ * 
+ * Given a singly linked list, group all odd nodes together followed by the even nodes. 
+ * Please note here we are talking about the node number and not the value in the nodes.
+ * 
+ * You should try to do it in place. The program should run in O(1) space complexity and O(nodes) time complexity.
+ * 
+ * Example:
+ * Given 1->2->3->4->5->NULL,
+ * return 1->3->5->2->4->NULL.
+ * 
+ * Note:
+ * The relative order inside both the even and odd groups should remain as it was in the input. 
+ * The first node is considered odd, the second node even and so on ...
+ */
+public class OddEvenList {
+	public ListNode oddEvenList(ListNode head) {
+        if (head == null || head.next == null) return head;
+        
+        ListNode odd = head;
+        ListNode evenHead = head.next;
+        ListNode even = evenHead;
+        
+        while (even != null && even.next != null) {
+        	odd.next = odd.next.next;
+        	even.next = even.next.next;
+        	odd = odd.next;
+        	even = even.next;
+        }
+        
+        odd.next = evenHead;
+        
+        return head;
+    }
+	
+	public static void main(String[] args) {
+		OddEvenList solution = new OddEvenList();
+		
+		ListNode l1 = new ListNode(1);
+		ListNode l2 = new ListNode(2);
+		ListNode l3 = new ListNode(3);
+		ListNode l4 = new ListNode(4);
+		ListNode l5 = new ListNode(5);
+		l1.next = l2;
+		l2.next = l3;
+		l3.next = l4;
+		l4.next = l5;
+		
+		ListNode result = solution.oddEvenList(l1);
+		
+		while (result != null) {
+			System.out.println(result.val);
+			result = result.next;
+		}
+	}
+}
