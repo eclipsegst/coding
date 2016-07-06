@@ -1,6 +1,5 @@
 package challenge;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeSet;
@@ -80,10 +79,8 @@ public class ContainsDuplicateIII {
 	}
 	
 	public static void main(String[] args) {
-		ContainsDuplicateIII solution = new ContainsDuplicateIII();
 		TreeSet<Integer> values = new TreeSet<Integer>();
 		Integer floor = values.floor(Integer.MAX_VALUE + 2);
 		System.out.println(floor);
-		
 	}
 }
