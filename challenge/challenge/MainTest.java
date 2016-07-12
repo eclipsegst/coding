@@ -46,7 +46,7 @@ public class MainTest {
 	public void testFlipGame() {
 		FlipGame solution = new FlipGame();
 		String s = "++++";
-		assertEquals("test FlipGame", 3, solution.possibleNextMoves(s).size());
+		assertEquals("test FlipGame", 3, solution.generatePossibleNextMoves(s).size());
 	}
 	
 	@Test
