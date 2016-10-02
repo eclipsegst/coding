@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import u.helpers.UndirectedGraphNode;
+import helpers.UndirectedGraphNode;
 
 /**
  * @author Zhaolong Zhong Sep 29, 2016

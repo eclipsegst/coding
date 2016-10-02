@@ -8,6 +8,7 @@ import java.util.HashMap;
  * @author Zhaolong Zhong Sep 30, 2016
  */
 public class LetterCombinations {
+	// Time: O(3^n), Space: O(n)
 	public ArrayList<String> letterCombinations(String digits) {
 		ArrayList<String> result = new ArrayList<String>();
 		
@@ -41,6 +42,10 @@ public class LetterCombinations {
 			return;
 		}
 		
+		// The average number of character in each key is 3
+		// Each level has m (3) different character.
+		// The depth is n which is the length of digits.
+		// Time complexity is m * m * ...* m = m^n
 		for (char c : map.get(digits.charAt(sb.length()))) {
 			sb.append(c);
 			letterCombinationsHelper(map, digits, sb, result);
