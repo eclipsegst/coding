@@ -91,13 +91,9 @@ public class Streams {
 			lines.onClose( () -> System.out.println("Done!")).forEach(
 					System.out::println
 					);
-			
-			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
-		
 }

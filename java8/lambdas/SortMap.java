@@ -20,32 +20,27 @@ public class SortMap {
 		map.put("D", 26.0);
 		
 		System.out.println("Before sort");
-		for(double v : map.values()) {
-			System.out.print(v + " ");
-		}
+		map.forEach((k, v) -> {
+			System.out.println("k: " + k + ", v: " + v);
+		});
 		System.out.println();
 		System.out.println("After sort");
 		map = sortByValue(map);
-		for(double v : map.values()) {
-			System.out.print(v + " ");
-		}
+		map.forEach((k, v) -> {
+			System.out.println("k: " + k + ", v: " + v);
+		});
 	}
 
-	public static <K, V extends Comparable<? super V>> Map<K, V> 
-    sortByValue( Map<K, V> map )
-	{
-	      Map<K,V> result = new LinkedHashMap<>();
-	     Stream <Entry<K,V>> st = map.entrySet().stream();
-	
-	     st.sorted(Comparator.comparing(e -> e.getValue()))
-	          .forEach(e ->result.put(e.getKey(),e.getValue()));
-	
+	public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue( Map<K, V> map ) {
+		Map<K,V> result = new LinkedHashMap<>();
+		Stream <Entry<K,V>> st = map.entrySet().stream(); 
+		st.sorted(Comparator.comparing(e -> e.getValue()))
+			.forEach(e ->result.put(e.getKey(),e.getValue()));
+		
 	     return result;
 	}
 	
-	public static <K, V extends Comparable<? super V>> Map<K, V> 
-	sortByValueJava7( Map<K, V> map) {
-		
+	public static <K, V extends Comparable<? super V>> Map<K, V> sortByValueJava7( Map<K, V> map) {
 		List<Map.Entry<K, V>> list = new LinkedList<>(map.entrySet());
 		
 		Collections.sort(list, new Comparator<Map.Entry<K, V>>() {
